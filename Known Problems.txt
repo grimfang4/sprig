@@ -1,0 +1,8 @@
+Gouraud shading is horizontally-biased.
+Alpha-blended beziers overdraw pixels.
+Alpha-blending and anti-aliasing need special treatment in thick primitives.
+
+Not yet implemented:
+SPG_TSLOW
+SPG_TBLEND
+SPG_TSURFACE_ALPHA
