@@ -1,0 +1,654 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><!-- saved from url=(0031)http://pubpages.unh.edu/~jmb97/ -->
+
+
+<title>Primitives - SPriG</title><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta content="MSHTML 6.00.2900.3157" name="GENERATOR"></head>
+<body>
+<tc></tc>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: center; height: 33px; background-color: rgb(51, 51, 255); width: 1076px;" colspan="2"><big style="font-weight: bold; color: white;"><big>Primitives
+Functions</big></big></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: rgb(91, 128, 255); width: 105px;">
+<span style="font-weight: bold; color: black;">Primitives</span><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Polygon.html">Polygon</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Transform.html">Transform</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Surface.html">Surface</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Drawing.html">Drawing</a><br><a style="font-weight: bold; color: white;" href="Dirty%20Rects.html">Dirty Rect</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Palette.html">Palette</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Control.html">Control</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Misc.html">Misc</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Defines.html">Defines</a><br><a style="color: white; font-weight: bold;" href="Types.html">Types</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Extended.html">Extended</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Arguments.html">Arguments</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="index.html">Index</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Credits.html">Credits</a><br>
+</td>
+<td style="vertical-align: top; height: 600px; width: 1076px;"><br>
+<table style="text-align: left; margin-left: 30px; width: 872px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="width: 81px;">Return</td>
+<td style="width: 175px;">Name</td>
+<td style="width: 468px;">Arguments</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_Pixel</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_PixelBlend</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_LineH</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x2,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+Color</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_LineHBlend</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x2,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_LineV</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y2,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+Color</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_LineVBlend</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y2,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_LineFn</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+X1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+Y1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+X2,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+Y2,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+Color,
+<span style="font-style: italic;">void </span><span style="font-weight: bold; color: rgb(51, 51, 51); font-style: italic;">Callback</span><span style="font-style: italic;">(SDL_Surface *Surf, Sint16 X,
+Sint16 Y, Uint32 Color)</span></td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_Line</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x2,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y2,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+Color</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_LineBlend</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x2,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y2,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_LineFadeFn</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x2,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y2,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color1,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color2, <span style="font-style: italic;">void </span><span style="font-weight: bold; color: rgb(51, 51, 51); font-style: italic;">Callback</span><span style="font-style: italic;">(SDL_Surface *Surf, Sint16 X,
+Sint16 Y,
+Uint32 Color)</span></td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_LineFade</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x2,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y2,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color1,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color2</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_LineFadeBlend</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x2,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y2,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color1,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha1,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color2,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha2</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_LineHTex</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;dest,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x1,&nbsp;<span style="color: rgb(30, 209, 53);"></span><span style="color: rgb(30, 209, 53);">Sint16</span>
+y, <span style="color: rgb(30, 209, 53);">Sint16</span>
+x2,&nbsp;<span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;"><br>
+SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;source,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+sx1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+sy1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+sx2,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+sy2</td>
+</tr>
+<tr><td>void</td><td><span style="font-weight: bold;">SPG_LineHFade</span></td><td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;dest,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span> x1,&nbsp;<span style="color: rgb(30, 209, 53);"></span><span style="color: rgb(30, 209, 53);">Sint16</span> y,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span> x2,&nbsp;<span style="color: rgb(30, 209, 53);"></span><span style="color: rgb(153, 51, 153);">Uint32</span> color1,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span> color2</td></tr><tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_Rect</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x2,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y2,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_RectBlend</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x2,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y2,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_RectFilled</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x2,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y2,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_RectFilledBlend</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x2,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y2,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_RectRound</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x2,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y2,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+r,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_RectRoundBlend</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x2,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y2,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+r,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_RectRoundFilled</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x2,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y2,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>&nbsp;r,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span> color</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_RectRoundFilledBlend</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x2,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y2,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+r,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_ArcFn</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+cx,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+cy,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+radius,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+startAngle,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+endAngle,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color, <span style="font-style: italic;">void </span><span style="font-weight: bold; color: rgb(51, 51, 51); font-style: italic;">Callback</span><span style="font-style: italic;">(SDL_Surface *Surf, Sint16 X,
+Sint16 Y, Uint32 Color)</span></td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_Arc</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+radius,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+angle1,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+angle2,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_ArcBlend</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+radius,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+angle1,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+angle2,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_ArcFilled</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+cx,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+cy,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+radius,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+startAngle,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+endAngle,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_ArcFilledBlend</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+cx,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+cy,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+radius,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+startAngle,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+endAngle,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_CircleFn</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+r,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color, <span style="font-style: italic;">void
+</span><span style="font-weight: bold; color: rgb(51, 51, 51); font-style: italic;">Callback</span><span style="font-style: italic;">(SDL_Surface *Surf, Sint16 X,
+Sint16 Y, Uint32 Color)</span></td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_Circle</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+r,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_CircleBlend</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+r,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_CircleFilled</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+r,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_CircleFilledBlend</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+r,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_EllipseFn</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+rx,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+ry,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color, <span style="font-style: italic;">void
+</span><span style="color: rgb(51, 51, 51); font-weight: bold; font-style: italic;">Callback</span><span style="font-style: italic;">(SDL_Surface* Surf, Sint16 X,
+Sint16 Y, Uint32 Color)</span></td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_Ellipse</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+rx,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+ry,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_EllipseBlend</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+rx,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+ry,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_EllipseFilled</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+rx,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+ry,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_EllipseFilledBlend</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(255, 102, 0);">float </span>rx,&nbsp;<span style="color: rgb(255, 102, 0);">float</span><span style="color: rgb(30, 209, 53);"></span> ry,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td>
+</tr>
+<tr><td>void</td><td style="font-weight: bold;">SPG_EllipseArb</td><td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+rx,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+ry,&nbsp;<span style="color: rgb(255, 102, 0);">float<span style="color: black;"> angle,</span></span> <span style="color: rgb(153, 51, 153);">Uint32</span>
+color</td></tr><tr><td>void</td><td style="font-weight: bold;">SPG_EllipseBlendArb</td><td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+rx,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+ry,&nbsp;<span style="color: rgb(255, 102, 0);">float<span style="color: black;"> angle,</span></span>&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td></tr><tr><td>void</td><td style="font-weight: bold;">SPG_EllipseFilledArb</td><td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+rx,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+ry,&nbsp;<span style="color: rgb(255, 102, 0);">float<span style="color: black;"> angle,</span></span>&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color</td></tr><tr><td>void</td><td style="font-weight: bold;">SPG_EllipseFilledBlendArb</td><td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(255, 102, 0);">float </span>rx,&nbsp;<span style="color: rgb(255, 102, 0);">float</span><span style="color: rgb(30, 209, 53);"></span> ry,&nbsp;<span style="color: rgb(255, 102, 0);">float<span style="color: black;"> angle,</span></span>&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td></tr><tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_Bezier</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+startX,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>&nbsp;startY,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>&nbsp;cx1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>&nbsp;cy1,<span style="color: rgb(30, 209, 53);"> Sint16</span>&nbsp;cx2,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>&nbsp;cy2,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>&nbsp;endX,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>&nbsp;endY,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+quality,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_BezierBlend</td>
+<td style="width: 468px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+startX,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>&nbsp;startY,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>&nbsp;cx1,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>&nbsp;cy1,<span style="color: rgb(30, 209, 53);"> Sint16</span>&nbsp;cx2,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>&nbsp;cy2,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>&nbsp;endX,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>&nbsp;endY,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+quality,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+void SPG_Pixel(SDL_Surface *surface, Sint16 x, Sint16 y, Uint32 color)<br>
+- Draws a pixel of the given color at (x,y)<br>
+<br>
+void SPG_PixelBlend(SDL_Surface *surface, Sint16 x, Sint16 y, Uint32
+color, Uint8 alpha)<br>
+- Alpha blends a pixel of the given color at (x,y)<br>
+<br>
+void SPG_LineH(SDL_Surface *surface, Sint16 x1, Sint16 x2, Sint16 y,
+Uint32 Color)<br>
+- Draws a horizontal line<br>
+<br>
+void SPG_LineHBlend(SDL_Surface *surface, Sint16 x1, Sint16 x2, Sint16
+y, Uint32 color, Uint8 alpha)<br>
+- Alpha-blends a horizontal line<br>
+<br>
+void SPG_LineV(SDL_Surface *surface, Sint16 x, Sint16 y1, Sint16 y2,
+Uint32 Color)<br>
+- Draws a vertical line<br>
+<br>
+void SPG_LineVBlend(SDL_Surface *surface, Sint16 x, Sint16 y1, Sint16
+y2, Uint32 color, Uint8 alpha)<br>
+- Alpha-blends a vertical line<br>
+<br>
+void
+SPG_LineFn(SDL_Surface *surface, Sint16 X1, Sint16 Y1, Sint16 X2,
+Sint16 Y2, Uint32 Color, void Callback(SDL_Surface *Surf, Sint16 X,
+Sint16 Y, Uint32 Color))<br>
+- Performs the callback for each pixel of the line.<br>
+<br>
+void SPG_Line(SDL_Surface *surface, Sint16 x1, Sint16 y1, Sint16 x2,
+Sint16 y2, Uint32 Color)<br>
+- Draws a line between (x1,y1) and (x2,y2)<br>
+<br>
+void SPG_LineBlend(SDL_Surface *surface, Sint16 x1, Sint16 y1, Sint16
+x2, Sint16 y2, Uint32 color, Uint8 alpha)<br>
+- Alpha-blends a line between (x1,y1) and (x2,y2)<br>
+<br>
+void
+SPG_LineFadeFn(SDL_Surface *surface, Sint16 x1, Sint16 y1, Sint16 x2,
+Sint16 y2, Uint32 color1, Uint32 color2, void Callback(SDL_Surface
+*Surf, Sint16 X, Sint16 Y, Uint32 Color))<br>
+- Performs the callback at each point of a line.<br>
+<br>
+void SPG_LineFade(SDL_Surface *surface, Sint16 x1, Sint16 y1, Sint16
+x2, Sint16 y2, Uint32 color1, Uint32 color2)<br>
+- Draws a line that fades from 'color1' to 'color2'.<br>
+<br>
+void
+SPG_LineFadeBlend(SDL_Surface *surface, Sint16 x1, Sint16 y1, Sint16
+x2, Sint16 y2, Uint32 color1, Uint8 alpha1, Uint32 color2, Uint8 alpha2)<br>
+- Alpha-blends a line that fades from 'color1' to 'color2'.<br>
+<br>
+void SPG_LineHTex(SDL_Surface *dest,Sint16 x1,Sint16
+y,Sint16 x2,SDL_Surface *source,Sint16 sx1,Sint16 sy1,Sint16 sx2,Sint16 sy2)<br>
+- Maps the 'source' image to a horizontal line.<br>
+<br>
+void SPG_LineHFade(SDL_Surface *surface, Sint16 x1, Sint16 y1, Sint16
+x2, Uint32 color1, Uint32 color2)<br>
+- Draws a line that fades from 'color1' to 'color2'.<br><br>
+void SPG_Rect(SDL_Surface *surface, Sint16 x1, Sint16 y1, Sint16 x2,
+Sint16 y2, Uint32 color)<br>
+- Draws a rectangle.<br>
+<br>
+void SPG_RectBlend(SDL_Surface *surface, Sint16 x1, Sint16 y1, Sint16
+x2, Sint16 y2, Uint32 color, Uint8 alpha)<br>
+- Alpha-blends a rectangle.<br>
+<br>
+void SPG_RectFilled(SDL_Surface *surface, Sint16 x1, Sint16 y1, Sint16
+x2, Sint16 y2, Uint32 color)<br>
+- Draws a filled rectangle.<br>
+<br>
+void SPG_RectFilledBlend(SDL_Surface *surface, Sint16 x1, Sint16 y1,
+Sint16 x2, Sint16 y2, Uint32 color, Uint8 alpha)<br>
+- Alpha-blends a filled rectangle.<br>
+<br>
+void SPG_RectRound(SDL_Surface *surface, Sint16 x1, Sint16 y1, Sint16
+x2, Sint16 y2, float r, Uint32 color)<br>
+- Draws a rectangle with rounded corners.<br>
+<br>
+void SPG_RectRoundBlend(SDL_Surface *surface, Sint16 x1, Sint16 y1,
+Sint16 x2, Sint16 y2, float r, Uint32 color, Uint8 alpha)<br>
+- Alpha-blends a rectangle with rounded corners.<br>
+<br>
+void SPG_RectRoundFilled(SDL_Surface *surface, Sint16 x1, Sint16 y1,
+Sint16 x2, Sint16 y2, float r, Uint32 color)<br>
+- Draws a filled rectangle with rounded corners.<br>
+<br>
+void
+SPG_RectRoundFilledBlend(SDL_Surface *surface, Sint16 x1, Sint16 y1,
+Sint16 x2, Sint16 y2, float r, Uint32 color, Uint8 alpha)<br>
+- Alpha-blends a filled rectangle with rounded corners.<br>
+<br>
+void
+SPG_ArcFn(SDL_Surface* surface, Sint16 cx, Sint16 cy, float radius,
+float startAngle, float endAngle, Uint32 color, void
+Callback(SDL_Surface *Surf, Sint16 X, Sint16 Y, Uint32 Color))<br>
+- Performs the callback at each pixel of an arc.<br>
+<br>
+void SPG_Arc(SDL_Surface* surface, Sint16 x, Sint16 y, float radius,
+float angle1, float angle2, Uint32 color)<br>
+- Draws an arc of a circle.<br>
+<br>
+void SPG_ArcBlend(SDL_Surface* surface, Sint16 x, Sint16 y, float
+radius, float angle1, float angle2, Uint32 color, Uint8 alpha)<br>
+- Alpha-blends an arc of a circle.<br>
+<br>
+void SPG_ArcFilled(SDL_Surface* surface, Sint16 cx, Sint16 cy, float
+radius, float startAngle, float endAngle, Uint32 color)<br>
+- Draws a filled arc of a circle (pie slice).<br>
+<br>
+void
+SPG_ArcFilledBlend(SDL_Surface* surface, Sint16 cx, Sint16 cy, float
+radius, float startAngle, float endAngle, Uint32 color, Uint8 alpha)<br>
+- Alpha-blends a filled arc of a circle (pie slice).<br>
+<br>
+void
+SPG_CircleFn(SDL_Surface *surface, Sint16 x, Sint16 y, float r, Uint32
+color, void Callback(SDL_Surface *Surf, Sint16 X, Sint16 Y, Uint32
+Color))<br>
+- Performs the callback at each pixel of a circle.<br>
+<br>
+void SPG_Circle(SDL_Surface *surface, Sint16 x, Sint16
+y,&nbsp;float r, Uint32 color)<br>
+- Draws a circle.<br>
+<br>
+void SPG_CircleBlend(SDL_Surface *surface, Sint16 x, Sint16
+y,&nbsp;float r, Uint32 color, Uint8 alpha)<br>
+- Alpha-blends a circle.<br>
+<br>
+void SPG_CircleFilled(SDL_Surface *surface, Sint16 x, Sint16
+y,&nbsp;float r, Uint32 color)<br>
+- Draws filled circle.<br>
+<br>
+void SPG_CircleFilledBlend(SDL_Surface *surface, Sint16 x, Sint16
+y,&nbsp;float r, Uint32 color, Uint8 alpha)<br>
+- Alpha-blends a filled circle.<br>
+<br>
+void
+SPG_EllipseFn(SDL_Surface *surface, Sint16 x, Sint16 y,&nbsp;float
+rx,&nbsp;float ry, Uint32 color, void Callback(SDL_Surface *Surf,
+Sint16 X,
+Sint16 Y, Uint32 Color))<br>
+- Performs the callback at each pixel of an ellipse.<br>
+<br>
+void SPG_Ellipse(SDL_Surface *surface, Sint16 x, Sint16
+y,&nbsp;float rx,&nbsp;float ry, Uint32 color)<br>
+- Draws an ellipse.<br>
+<br>
+void SPG_EllipseBlend(SDL_Surface *surface, Sint16 x, Sint16
+y,&nbsp;float rx,&nbsp;float ry, Uint32 color, Uint8 alpha)<br>
+- Alpha-blends an ellipse.<br>
+<br>
+void SPG_EllipseFilled(SDL_Surface *surface, Sint16 x, Sint16
+y,&nbsp;float rx,&nbsp;float ry, Uint32 color)<br>
+- Draws a filled ellipse.<br>
+<br>
+void SPG_EllipseFilledBlend(SDL_Surface *surface, Sint16 x, Sint16
+y,&nbsp;float rx,&nbsp;float ry, Uint32 color, Uint8 alpha)<br>
+- Alpha-blends a filled ellipse.<br><br>void SPG_EllipseArb(SDL_Surface *Surface, Sint16 x, Sint16 y, float rx, float ry, float angle, Uint32 color);<br>- Draws an ellipse at the given rotation angle.<br><br>void SPG_EllipseBlendArb(SDL_Surface *Surface, Sint16 x, Sint16 y, float rx, float ry, float angle, Uint32 color, Uint8 alpha)<br>- Alpha-blends an ellipse at&nbsp;the given rotation angle.<br><br>void SPG_EllipseFilledArb(SDL_Surface *Surface, Sint16 x, Sint16 y, float rx, float ry, float angle, Uint32 color);<br>- Draws a filled ellipse at&nbsp;the given rotation angle.<br><br>void
+SPG_EllipseFilledBlendArb(SDL_Surface *Surface, Sint16 x, Sint16 y,
+float rx, float ry, float angle, Uint32 color, Uint8 alpha)<br>
+- Alpha-blends a filled ellipse at&nbsp;the given rotation angle.<br><br>
+void
+SPG_Bezier(SDL_Surface *surface, Sint16 startX, Sint16&nbsp;startY,
+Sint16 cx1,
+Sint16 cy1, Sint16 cx2, Sint16 cy2, Sint16 endX, Sint16 endY, Uint8
+quality, Uint32
+color)<br>
+-
+Draws a bezier curve from (startX, startY) to (endX, endY) with the
+indicated control points. &nbsp;A quality of 4-7 is normal.<br>
+<br>
+void
+SPG_BezierBlend(SDL_Surface *surface,&nbsp;Sint16 startX,
+Sint16&nbsp;startY, Sint16 cx1,
+Sint16 cy1, Sint16 cx2, Sint16 cy2, Sint16 endX, Sint16 endY, Uint8
+quality, Uint32
+color, Uint8 alpha)<br>
+-
+Alpha-blends a bezier curve from (startX, startY) to (endX, endY) with
+the indicated control points. &nbsp;A quality of 4-7 is normal.<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+SPriG v1.0.0 Documentation by Jonathan Dearborn 2008
+</body></html>

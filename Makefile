@@ -6,15 +6,19 @@ CFLAGS += $(SPRIG_CFLAGS) -fPIC
 LIBS = $(SPRIG_LIBS)
 
 SPRIG_VER = 1
-SPRIG_VER_MINOR = 0
+SPRIG_VER_MINOR = 1
 SPRIG_VER_BUGFIX = 0
 
 OBJECTS=SPG_surface.o SPG_primitives.o SPG_polygon.o SPG_rotation.o SPG_misc.o
+HEADERS=sprig.h sprig_common.h
+#sprig_inline.h should not affect the build
 
 all:	config $(OBJECTS) 
 	@ar rsc libsprig.a $(OBJECTS)
+	@echo
+	@echo ~~ Ready!  Type \'make install\' to install to $(PREFIX)/lib and $(PREFIX_H) ~~
 
-$(OBJECTS):	%.o:%.c   #Each object depends on its .cpp and .h file
+$(OBJECTS):	%.o:%.c  $(HEADERS)   #Each object depends on its .c and .h file
 	$(CXX) $(CFLAGS) -c $<
 
 shared: all

@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><!-- saved from url=(0031)http://pubpages.unh.edu/~jmb97/ -->
+
+
+<title>Dirty Rects - SPriG</title><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta content="MSHTML 6.00.2900.3157" name="GENERATOR"></head>
+<body>
+<tc></tc>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: center; height: 33px; background-color: rgb(51, 51, 255);" colspan="2"><big style="font-weight: bold; color: white;"><big>Dirty Rect Functions</big></big></td>
+</tr>
+<tr>
+<td style="vertical-align: top; width: 100px; background-color: rgb(91, 128, 255);">
+<a style="font-weight: bold; color: white;" href="Primitives.html">Primitives</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Polygon.html">Polygon</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Transform.html">Transform</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Surface.html">Surface</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Drawing.html">Drawing</a><a style="font-weight: bold; color: white;" href="Drawing.html"><br></a><span style="font-weight: bold; color: black;">Dirty Rect</span><span style="font-weight: bold; color: black;"></span><span style="font-weight: bold; color: black;"></span><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Palette.html">Palette</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Control.html">Control</a><a style="font-weight: bold; color: white;" href="States.html"></a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Misc.html">Misc</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Defines.html">Defines</a><br><a style="color: white; font-weight: bold;" href="Types.html">Types</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Extended.html">Extended</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Arguments.html">Arguments</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="index.html">Index</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Credits.html">Credits</a><br>
+</td>
+<td style="width: 838px; vertical-align: top; height: 600px;"><br>
+<table style="text-align: left; width: 762px; margin-left: 30px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="width: 81px;">Return</td>
+<td style="width: 175px;">Name</td>
+<td style="width: 478px;">Arguments</td>
+</tr>
+<tr>
+<td style="width: 81px; color: black;">void</td>
+<td style="width: 175px; font-weight: bold;">SPG_EnableDirty</td>
+<td style="width: 478px;"><span style="color: rgb(94, 113, 150);">SPG_bool</span>&nbsp;enable</td>
+</tr>
+<tr>
+<td style="color: black;">void</td>
+<td style="font-weight: bold;">SPG_DirtyInit</td>
+<td><span style="color: rgb(226, 94, 98);">Uint16</span><span style="color: rgb(0, 102, 0);">&nbsp;<span style="color: black;">maxsize</span></span></td>
+</tr>
+<tr>
+<td style="width: 81px; color: black;">void</td>
+<td style="width: 175px; font-weight: bold;">SPG_DirtyAdd</td>
+<td style="width: 478px;"><span style="color: rgb(102, 102, 0);"><span style="font-weight: bold;"></span></span><span style="font-weight: bold; color: red;">SDL_Rect*</span><span style="color: rgb(153, 51, 153);"></span> rect</td>
+</tr>
+<tr>
+<td style="width: 81px;"><span style="color: rgb(102, 102, 0);"><span style="font-weight: bold;">SPG_DirtyTable*</span></span></td>
+<td style="width: 175px; font-weight: bold;">SPG_DirtyUpdate</td>
+<td style="width: 478px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span> screen</td>
+</tr>
+<tr>
+<td style="width: 81px;">void</td>
+<td style="width: 175px; font-weight: bold;">SPG_DirtySwap</td>
+<td style="width: 478px;">none</td>
+</tr>
+<tr>
+<td style="width: 81px;"><span style="color: rgb(94, 113, 150);">SPG_bool</span></td>
+<td style="width: 175px; font-weight: bold;">SPG_DirtyEnabled</td>
+<td style="width: 478px;"><span style="color: rgb(0, 0, 153);"><span style="color: black;">none</span><span style="font-weight: bold;"><br></span></span></td>
+</tr>
+<tr>
+<td style="width: 81px;"><span style="color: rgb(102, 102, 0);"><span style="font-weight: bold;">SPG_DirtyTable*</span></span></td>
+<td style="width: 175px; font-weight: bold;">SPG_DirtyMake</td>
+<td style="width: 478px;"><span style="color: rgb(226, 94, 98);">Uint16</span>&nbsp;maxsize</td>
+</tr><tr><td>void</td><td style="font-weight: bold;">SPG_DirtyAddTo</td><td><span style="color: rgb(102, 102, 0);"><span style="font-weight: bold;">SPG_DirtyTable*</span></span><span style="color: rgb(0, 0, 153);"></span> table,&nbsp;<span style="color: red;"></span><span style="font-weight: bold; color: red;">SDL_Rect*</span><span style="color: rgb(153, 51, 153);"></span> rect</td></tr><tr><td>void</td><td><span style="font-weight: bold;">SPG_DirtyFree</span></td><td><span style="color: rgb(102, 102, 0);"><span style="font-weight: bold;">SPG_DirtyTable*</span></span>&nbsp;table</td></tr><tr><td><span style="color: rgb(102, 102, 0);"><span style="font-weight: bold;">SPG_DirtyTable*</span></span></td><td><span style="font-weight: bold;">SPG_DirtyGet</span></td><td>none</td></tr><tr><td>void</td><td><span style="font-weight: bold;">SPG_DirtyClear</span></td><td><span style="color: rgb(102, 102, 0);"><span style="font-weight: bold;">SPG_DirtyTable*</span></span>&nbsp;table</td></tr><tr><td>void</td><td><span style="font-weight: bold;">SPG_DirtyLevel</span></td><td><span style="color: rgb(226, 94, 98);">Uint16 </span>optimizationLevel</td></tr><tr><td>void</td><td><span style="font-weight: bold;">SPG_DirtyClip</span></td><td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;screen,&nbsp;<span style="color: red;"></span><span style="font-weight: bold; color: red;">SDL_Rect*</span> rect</td></tr>
+</tbody>
+</table>
+<br>
+<br>void SPG_EnableDirty(SPG_bool enable)<br>- Enables or disables
+automatic generation of dirty rects by the graphics primitives.
+&nbsp;Each primitive as well as SPG_Blit() and the transform functions
+create their own dirty rects and add them to the front table (see
+SPG_DirtyInit()). &nbsp;You should disable dirty rects when drawing to surfaces other than your display surface.<br><br>void SPG_DirtyInit(Uint16 maxsize)<br>-
+Initializes the dirty rect system. &nbsp;There are two tables that are
+set to the specified size. &nbsp;The front table is the one that
+receives all the added rects from primitives. &nbsp;The back table is
+used to preserve these rects for the next frame, so that they can be
+updated too. &nbsp;Each dirty rect must be updated once to show the new
+drawing there, then again in the next frame so that the old drawing can
+be erased from the display.<br><br>void SPG_DirtyAdd(SDL_Rect* rect)<br>-
+Adds a given rect to the front table. &nbsp;These
+rects must be clipped (see SPG_DirtyClip()) or else SDL_UpdateRects(),
+called by SPG_DirtyUpdate(), will crash.<br><br>SPG_DirtyTable* SPG_DirtyUpdate(SDL_Surface* screen)<br>-
+This call updates the dirty rects on the given display surface.
+&nbsp;It returns the table of rects so that you can loop through them
+and redraw the background and whatever else you need.<br>Example:<br>&nbsp; SPG_DirtyTable* table = SPG_DirtyUpdate(screen);<br>&nbsp; int i;<br>&nbsp; for(i = 0; i &lt; table-&gt;count; i++)<br>&nbsp; {<br>&nbsp; // Blit background to table-&gt;rects[i]<br>&nbsp; SDL_BlitSurface(mybackground, &amp;bgrect, screen, &amp;(table-&gt;rects[i]);<br>&nbsp; }<br><br>void SPG_DirtySwap()<br>-
+Swaps the front and back tables. &nbsp;This should be done after
+SPG_DirtyUpdate() and after you reblit the background. &nbsp;In the
+next frame, the front table will have the old rects as well as any new
+ones.<br><br>SPG_bool SPG_DirtyEnabled()<br>- Returns 1 if automatic dirty rect creation is enabled.<br><br>SPG_DirtyTable* SPG_DirtyMake(Uint16 maxsize)<br>- Allocates a new dirty rect table (using malloc) and returns a pointer to it.<br><br>void SPG_DirtyAddTo(SPG_DirtyTable* table, SDL_Rect* rect)<br>-
+Adds a given rect to a table.<br><br>void SPG_DirtyFree(SPG_DirtyTable* table)<br>- Correctly frees a table created with SPG_DirtyMake().<br><br>SPG_DirtyTable* SPG_DirtyGet()<br>-
+Returns the current front table. &nbsp;Be aware that SPG_DirtySwap()
+changes this, so you cannot rely on always having a pointer to the
+front table unless you call this function each time you need to access
+the front table.<br><br>void SPG_DirtyClear(SPG_DirtyTable* table)<br>- Resets a table to a clean, empty state.<br><br>void SPG_DirtyLevel(Uint16 optimizationLevel)<br>- Sets the level of optimization used when dirty rects are merged by SPG_DirtyAdd().<br><br>void SPG_DirtyClip(SDL_Surface* screen, SDL_Rect* rect)<br>- Changes the given rect so that it is clipped to within the screen.<br><br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+SPriG v1.0.0 Documentation by Jonathan Dearborn 2008
+</body></html>

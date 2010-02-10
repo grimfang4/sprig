@@ -1,0 +1,320 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><!-- saved from url=(0031)http://pubpages.unh.edu/~jmb97/ -->
+
+
+<title>Control - SPriG</title><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta content="MSHTML 6.00.2900.3157" name="GENERATOR"></head>
+<body>
+<tc></tc>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: center; height: 33px; background-color: rgb(51, 51, 255); width: 1076px;" colspan="2"><big style="font-weight: bold; color: white;"><big>Control
+Functions</big></big></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: rgb(91, 128, 255); width: 105px;">
+<a style="font-weight: bold; color: white;" href="Primitives.html">Primitives</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Polygon.html">Polygon</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Transform.html">Transform</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Surface.html">Surface</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Drawing.html">Drawing</a><br><a style="font-weight: bold; color: white;" href="Dirty%20Rects.html">Dirty Rect</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Palette.html">Palette</a><br style="font-weight: bold; color: white;">
+<span style="font-weight: bold; color: black;">Control</span><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Misc.html">Misc</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Defines.html">Defines</a><br><a style="color: white; font-weight: bold;" href="Types.html">Types</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Extended.html">Extended</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Arguments.html">Arguments</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="index.html">Index</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Credits.html">Credits</a><br>
+</td>
+<td style="vertical-align: top; height: 600px; width: 1076px;"><br>
+<table style="text-align: left; margin-left: 30px; width: 640px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="width: 81px;">Return</td>
+<td style="width: 175px;">Name</td>
+<td style="width: 288px;">Arguments</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_EnableAutolock</td>
+<td style="width: 288px;"><span style="color: rgb(94, 113, 150);">SPG_bool</span>&nbsp;enable</td>
+</tr>
+<tr>
+<td><span style="color: rgb(94, 113, 150);">SPG_bool</span></td>
+<td style="font-weight: bold;">SPG_GetAutolock</td>
+<td style="width: 288px;">none</td>
+</tr>
+<tr><td>void</td><td style="font-weight: bold;">SPG_EnableRadians</td><td><span style="color: rgb(94, 113, 150);">SPG_bool</span>&nbsp;enable
+
+
+<span style="color: rgb(94, 113, 150);"></span></td></tr><tr><td><span style="color: rgb(94, 113, 150);">SPG_bool</span></td><td style="font-weight: bold;">SPG_GetRadians</td><td>none</td></tr><tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_PushBlend</td>
+<td style="width: 288px;"><span style="color: rgb(0, 102, 0);">Uint8</span>&nbsp;state</td>
+</tr>
+<tr>
+<td><span style="color: rgb(0, 102, 0);">Uint8</span></td>
+<td style="font-weight: bold;">SPG_PopBlend</td>
+<td style="width: 288px;">none</td>
+</tr>
+<tr>
+<td><span style="color: rgb(0, 102, 0);">Uint8</span></td>
+<td style="font-weight: bold;">SPG_GetBlend</td>
+<td style="width: 288px;">none</td>
+</tr>
+<tr><td>void</td><td style="font-weight: bold;">SPG_PushThickness</td><td><span style="color: rgb(226, 94, 98);">Uint16</span><span style="color: rgb(94, 113, 150);"> <span style="color: black;">pixels</span></span></td></tr><tr><td><span style="color: rgb(226, 94, 98);">Uint16</span></td><td style="font-weight: bold;">SPG_PopThickness</td><td>none</td></tr><tr><td><span style="color: rgb(226, 94, 98);">Uint16</span></td><td style="font-weight: bold;">SPG_GetThickness</td><td>none</td></tr><tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_PushAA</td>
+<td style="width: 288px;"><span style="color: rgb(94, 113, 150);">SPG_bool</span>&nbsp;enable</td>
+</tr>
+<tr>
+<td><span style="color: rgb(94, 113, 150);">SPG_bool</span></td>
+<td style="font-weight: bold;">SPG_PopAA</td>
+<td style="width: 288px;">none</td>
+</tr>
+<tr>
+<td><span style="color: rgb(94, 113, 150);">SPG_bool</span></td>
+<td style="font-weight: bold;">SPG_GetAA</td>
+<td style="width: 288px;">none</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_PushSurfaceAlpha</td>
+<td style="width: 288px;"><span style="color: rgb(94, 113, 150);">SPG_bool</span>&nbsp;enable</td>
+</tr>
+<tr>
+<td><span style="color: rgb(94, 113, 150);">SPG_bool</span></td>
+<td style="font-weight: bold;">SPG_PopSurfaceAlpha</td>
+<td style="width: 288px;">none</td>
+</tr>
+<tr>
+<td><span style="color: rgb(94, 113, 150);">SPG_bool</span></td>
+<td style="font-weight: bold;">SPG_GetSurfaceAlpha</td>
+<td style="width: 288px;">none</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_EnableErrors</td>
+<td style="width: 288px;"><span style="color: rgb(94, 113, 150);">SPG_bool</span>&nbsp;enable</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_Error</td>
+<td style="width: 288px;"><span style="color: red;">const char*</span> err</td>
+</tr>
+<tr>
+<td><span style="color: red;">char*</span></td>
+<td style="font-weight: bold;">SPG_GetError</td>
+<td style="width: 288px;">none</td>
+</tr>
+<tr>
+<td><span style="color: rgb(226, 94, 98);">Uint16</span></td>
+<td style="font-weight: bold;">SPG_NumErrors</td>
+<td style="width: 288px;">none</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+void&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPG_Lock(SPG_bool enable)<br>
+-
+Sets the state of the automatic surface lock.&nbsp; When enabled,
+many
+functions will automatically lock and unlock the surfaces they use when
+necessary.<br>
+<br>
+SPG_bool &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPG_GetLock()<br>
+- Returns the current state of the automatic surface lock.<br>
+<br>
+void&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPG_EnableRadians(SPG_bool enable)<br>
+- When enabled, all functions will expect angles measured in radians. &nbsp;When disabled, they will accept angles in degrees.<br>
+<br>
+SPG_bool &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPG_GetRadians()<br>
+- Returns whether or not Sprig functions are currently accepting radian angle measure.<br><br>
+void&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPG_PushBlend(Uint8 state)<br>
+-
+Pushes a new current alpha-blending state to the top of the blend
+stack.&nbsp; This causes alpha-blending functions to behave
+according
+to the new state.<br>
+The available blitting modes are:<br>
+<table style="text-align: left; margin-right: auto; margin-left: 37px; width: 754px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="width: 179px;"><font size="-1">Name</font></td>
+<td style="width: 58px;"><font size="-1">RGB</font></td>
+<td style="width: 57px;"><font size="-1">Alpha</font></td>
+<td style="width: 323px;">Description</td>
+</tr>
+<tr>
+<td style="width: 179px;"><font size="-1">SPG_DEST_ALPHA</font></td>
+<td style="width: 58px;"><font size="-1">Blend</font></td>
+<td style="width: 57px;"><font size="-1">Dest</font></td>
+<td style="width: 323px;">Blends colors
+normally and keeps the destination per-pixel alpha. &nbsp;This is
+the same as SDL_BlitSurface's blending.</td>
+</tr>
+<tr>
+<td style="width: 179px;"><font size="-1">SPG_SRC_ALPHA</font></td>
+<td style="width: 58px;"><font size="-1">Blend</font></td>
+<td style="width: 57px;"><font size="-1">Src</font></td>
+<td style="width: 323px;">Blends colors and
+copies the source alpha.</td>
+</tr>
+<tr>
+<td style="width: 179px;"><font size="-1">SPG_COMBINE_ALPHA</font></td>
+<td style="width: 58px;"><font size="-1">Blend</font></td>
+<td style="width: 57px;"><font size="-1">Blend</font></td>
+<td style="width: 323px;">Blends colors and
+blends the alpha. &nbsp;This is "True" blending and lends well to
+some neat compositing effects.</td>
+</tr>
+<tr>
+<td style="width: 179px;"><font size="-1">SPG_COPY_NO_ALPHA</font></td>
+<td style="width: 58px;"><font size="-1">Src</font></td>
+<td style="width: 57px;"><font size="-1">Opaque</font></td>
+<td style="width: 323px;">Copies the source
+color, sets the dest alpha to opaque.</td>
+</tr>
+<tr>
+<td style="width: 179px;"><font size="-1">SPG_COPY_DEST_ALPHA</font></td>
+<td style="width: 58px;"><font size="-1">Src</font></td>
+<td style="width: 57px;"><font size="-1">Dest</font></td>
+<td style="width: 323px;">Copies the source
+color, keeps the dest alpha.</td>
+</tr>
+<tr>
+<td style="width: 179px;"><font size="-1">SPG_COPY_SRC_ALPHA</font></td>
+<td style="width: 58px;"><font size="-1">Src</font></td>
+<td style="width: 57px;"><font size="-1">Src</font></td>
+<td style="width: 323px;">Copies the source
+color and alpha.</td>
+</tr>
+<tr>
+<td style="width: 179px;"><font size="-1">SPG_COPY_COMBINE_ALPHA</font></td>
+<td style="width: 58px;"><font size="-1">Src</font></td>
+<td style="width: 57px;"><font size="-1">Blend</font></td>
+<td style="width: 323px;">Copies the source
+color and blends the alpha.</td>
+</tr>
+<tr>
+<td style="width: 179px;"><font size="-1">SPG_COPY_ALPHA_ONLY</font></td>
+<td style="width: 58px;"><small>Dest</small></td>
+<td style="width: 57px;"><small>Src</small></td>
+<td style="width: 323px;">Keeps the dest
+color, but copies the source alpha.</td>
+</tr>
+<tr>
+<td style="width: 179px;"><small>SPG_COMBINE_ALPHA_ONLY</small></td>
+<td style="width: 58px;"><small>Dest</small></td>
+<td style="width: 57px;"><small>Blend</small></td>
+<td style="width: 323px;">Keeps the dest
+color, but blends the alpha.</td>
+</tr>
+<tr>
+<td style="width: 179px;"><small>SPG_REPLACE_COLORKEY</small></td>
+<td style="width: 58px;"><small>Src</small></td>
+<td style="width: 57px;"><small>Src</small></td>
+<td style="width: 323px;">If the destination
+surface has the SDL_SRCCOLORKEY flag, this replaces the dest colorkey
+color in the image with the source color and alpha. &nbsp;This is
+similar to palette-swapping, but can be used with gradients and other
+images.</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+Uint8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPG_PopBlend()<br>
+-
+Pops the current alpha-blending state from the blend stack.&nbsp;
+This
+state's value is returned while the previous state becomes current.<br>
+<br>
+Uint8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPG_GetBlend()<br>
+- Returns the current alpha-blending state.<br>
+<br>
+void&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPG_PushThickness(Uint16 pixels)<br>
+-
+Pushes a new current thickness to the top of the thickness
+stack.&nbsp; This causes line graphics to be drawn at the current thickness of pixels.<br>
+<br>Uint16 &nbsp;&nbsp; SPG_PopThickness()<br>
+- Pops the
+current thickness from the thickness stack.&nbsp; This state's
+value
+is returned while the previous state becomes current.<br>
+<br>Uint16 &nbsp;&nbsp; SPG_GetThickness()<br>
+- Returns the current thickness in pixels.<br>
+<br>
+void&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPG_PushAA(SPG_bool enable)<br>
+-
+Pushes a new current anti-aliasing state to the top of the AA
+stack.&nbsp; When enabled, this causes certain functions to be
+drawn
+smoothly.<br>
+<br>
+SPG_bool&nbsp;&nbsp;&nbsp; SPG_PopAA()<br>
+- Pops the
+current anti-aliasing state from the AA stack.&nbsp; This state's
+value
+is returned while the previous state becomes current.<br>
+<br>
+SPG_bool&nbsp;&nbsp;&nbsp; SPG_GetAA()<br>
+- Returns the current anti-aliasing state.<br>
+<br>
+void&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPG_PushSurfaceAlpha(SPG_bool enable)<br>
+-
+Pushes a new current surface alpha mode to the top of the surface alpha
+stack.&nbsp; When enabled, this causes SPG_Blit to combine
+per-surface
+alpha and per-pixel alpha.<br>
+<br>
+SPG_bool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPG_PopSurfaceAlpha()<br>
+-
+Pops the current surface alpha mode from the surface alpha
+stack.&nbsp;
+This state's value is returned while the previous state becomes current.<br>
+<br>
+SPG_bool&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPG_GetSurfaceAlpha()<br>
+- Returns the current surface alpha mode.<br>
+<br>
+void&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPG_EnableErrors(SPG_bool enable)<br>
+- Enable the error messages from SPriG functions.&nbsp; These are
+retreived by using SPG_GetError.<br>
+<br>
+void&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPG_Error(const char* err)<br>
+- Pushes the given error message onto the error stack.<br>
+<br>
+char*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPG_GetError()<br>
+- Pops the most recent error message from the error stack.<br>
+<br>
+Uint16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SPG_NumErrors()<br>
+- Returns the number of errors left on the error stack.<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+SPriG v1.0.0 Documentation by Jonathan Dearborn 2008
+</body></html>

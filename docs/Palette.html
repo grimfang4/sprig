@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><!-- saved from url=(0031)http://pubpages.unh.edu/~jmb97/ -->
+
+
+<title>Palette - SPriG</title><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta content="MSHTML 6.00.2900.3157" name="GENERATOR"></head>
+<body>
+<tc></tc>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: center; height: 33px; background-color: rgb(51, 51, 255); width: 1076px;" colspan="2"><big style="font-weight: bold; color: white;"><big>Palette
+Functions</big></big></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: rgb(91, 128, 255); width: 105px;">
+<a style="font-weight: bold; color: white;" href="Primitives.html">Primitives</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Polygon.html">Polygon</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Transform.html">Transform</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Surface.html">Surface</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Drawing.html">Drawing</a><br><a style="font-weight: bold; color: white;" href="Dirty%20Rects.html">Dirty Rect</a><br style="font-weight: bold; color: white;">
+<span style="font-weight: bold; color: black;">Palette</span><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Control.html">Control</a><a style="font-weight: bold; color: white;" href="States.html"></a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Misc.html">Misc</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Defines.html">Defines</a><br><a style="color: white; font-weight: bold;" href="Types.html">Types</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Extended.html">Extended</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Arguments.html">Arguments</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="index.html">Index</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Credits.html">Credits</a><br>
+</td>
+<td style="vertical-align: top; height: 600px; width: 1076px;"><br>
+<table style="text-align: left; margin-left: 30px; width: 1020px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="width: 81px;">Return</td>
+<td style="width: 175px;">Name</td>
+<td style="width: 608px;">Arguments</td>
+</tr>
+<tr>
+<td style="width: 81px; color: rgb(255, 102, 0); font-weight: bold;">SDL_Color</td>
+<td style="width: 175px; font-weight: bold;">SPG_MakeColor</td>
+<td style="width: 608px;"><span style="color: rgb(0, 102, 0);">Uint8</span>
+R,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+G,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+B</td>
+</tr>
+
+<tr><td style="font-weight: bold; color: rgb(255, 102, 0);">SDL_Color</td><td><span style="font-weight: bold;">SPG_MakeColorAlpha</span></td><td><span style="color: rgb(0, 102, 0);">Uint8</span>
+R,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+G,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+B,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span> A</td></tr><tr>
+<td style="width: 81px; font-weight: bold; color: rgb(255, 102, 0);">SDL_Color</td>
+<td style="width: 175px; font-weight: bold;">SPG_GetColor</td>
+<td style="width: 608px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;Surface,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span> Color</td>
+</tr>
+<tr><td style="color: rgb(255, 102, 0); font-weight: bold;">SDL_Color<span style="font-weight: normal;">*</span></td><td><span style="font-weight: bold;">SPG_ColorPalette</span></td><td>none</td></tr><tr><td style="font-weight: bold; color: rgb(255, 102, 0);">SDL_Color<span style="font-weight: normal;">*</span></td><td><span style="font-weight: bold;">SPG_GrayPalette</span></td><td>none</td></tr><tr><td><span style="color: rgb(153, 51, 153);">Uint32</span></td><td><span style="font-weight: bold;">SPG_FindPaletteColor</span></td><td><span style="font-weight: bold; color: rgb(153, 51, 153);">SDL_Palette</span><span style="color: rgb(153, 51, 153);">*</span>&nbsp;palette,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span> r,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span> g,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span> b</td></tr><tr><td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span></td><td><span style="font-weight: bold;">SPG_PalettizeSurface</span></td><td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface, <span style="font-weight: bold; color: rgb(153, 51, 153);">SDL_Palette</span><span style="color: rgb(153, 51, 153);">*</span> palette</td></tr><tr>
+<td style="width: 81px;">void</td>
+<td style="width: 175px; font-weight: bold;">SPG_FadedPalette32</td>
+<td style="width: 608px;"><span style="font-weight: bold; color: rgb(153, 102, 51);">SDL_PixelFormat</span><span style="color: rgb(153, 102, 51);">*</span> format,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span> color1,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span> color2, <span style="color: rgb(153, 51, 153);">Uint32*</span> colorArray,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>
+startIndex,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>
+stopIndex</td>
+</tr>
+<tr>
+<td style="width: 81px;">void</td>
+<td style="width: 175px; font-weight: bold;">SPG_FadedPalette32Alpha</td>
+<td style="width: 608px;"><span style="font-weight: bold; color: rgb(153, 102, 51);">SDL_PixelFormat</span><span style="color: rgb(153, 102, 51);">*</span> format,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span> color1,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span> alpha1,<br>
+<span style="color: rgb(153, 51, 153);">Uint32</span> color2,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span> alpha2,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32*</span> colorArray,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16 </span>startIndex,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>
+stopIndex</td>
+</tr>
+<tr>
+<td style="width: 81px;">void</td>
+<td style="width: 175px; font-weight: bold;">SPG_RainbowPalette32</td>
+<td style="width: 608px;"><span style="font-weight: bold; color: rgb(153, 102, 51);">SDL_PixelFormat</span><span style="color: rgb(153, 102, 51);">*</span> format,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32*</span> colorArray,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8 </span>intensity,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>
+startIndex,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>
+stopIndex</td>
+</tr>
+<tr>
+<td style="width: 81px;">void</td>
+<td style="width: 175px; font-weight: bold;">SPG_GrayPalette32</td>
+<td style="width: 608px;"><span style="font-weight: bold; color: rgb(153, 102, 51);">SDL_PixelFormat</span><span style="color: rgb(153, 102, 51);">*</span> format,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32*</span> colorArray,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>
+startIndex,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>
+stopIndex</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+SDL_Color SPG_MakeColor(Uint8 R, Uint8 G, Uint8 B)<br>
+- Returns an SDL_Color structure initialized with the given RGB values.<br>
+<br>
+SDL_Color SPG_MakeColorAlpha(Uint8 R, Uint8 G, Uint8 B, Uint8 A)<br>
+- Returns an SDL_Color structure initialized with the given RGBA values.<br>
+<br>
+SDL_Color SPG_GetColor(SDL_Surface* Surface, Uint32 Color)<br>
+- Returns an SDL_Color structure that represents the given color in the
+format of the given surface.<br><br>SDL_Color* SPG_ColorPalette()<br>- Returns a default colorful array of SDL_Colors that can be used with SDL_SetColors or SDL_SetPalette on 8-bit surfaces.<br><br>SDL_Color* SPG_GrayPalette()<br>- Returns a grayscale array of SDL_Colors that can be used with SDL_SetColors or SDL_SetPalette on 8-bit surfaces.<br><br>Uint32 SPG_FindPaletteColor(SDL_Palette* palette, Uint8 r, Uint8 g, Uint8 b)<br>- Returns the closest match in the palette to the specified RGB combination.<br><br>SDL_Surface* SPG_PalettizeSurface(SDL_Surface* surface, SDL_Palette* palette)<br>-
+Converts a surface to 8-bit format with the given palette. &nbsp;This
+may be a little slower than SDL_ConvertSurface, but the colors are
+accurate.<br>
+<br>
+void
+SPG_FadedPalette32(SDL_PixelFormat* format, Uint32 color1, Uint32
+color2, Uint32* colorArray, Uint16 startIndex, Uint16 stopIndex)<br>
+- Fills the given array from&nbsp;startIndex to stopIndex with 32-bit
+colors interpolated between the given colors.<br>
+<br>
+void
+SPG_FadedPalette32Alpha(SDL_PixelFormat* format, Uint32 color1,
+Uint8 alpha1, Uint32 color2, Uint8 alpha2, Uint32* colorArray, Uint16
+startIndex, Uint16 stopIndex)<br>
+- Fills the given array from&nbsp;startIndex to&nbsp;stopIndex with 32-bit
+colors interpolated between the given colors.<br>
+<br>
+void&nbsp;SPG_RainbowPalette32(SDL_PixelFormat* format, Uint32*
+colorArray, Uint8 intensity, Uint16 startIndex, Uint16 stopIndex)<br>
+- Fills the given array from&nbsp;startIndex to&nbsp;stopIndex with a
+rainbow palette at the given intensity. &nbsp;An intensity of 0 is gray, intensity of 255 is vivid.<br>
+<br>
+void&nbsp;SPG_GrayPalette32(SDL_PixelFormat* format, Uint32* colorArray,
+Uint16 startIndex, Uint16 stopIndex)<br>
+- Fills the given array from&nbsp;startIndex to&nbsp;stopIndex with a black
+and white palette.<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+SPriG v1.0.0 Documentation by Jonathan Dearborn 2008
+</body></html>

@@ -1,0 +1,307 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><!-- saved from url=(0031)http://pubpages.unh.edu/~jmb97/ -->
+
+
+<title>Drawing - SPriG</title><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta content="MSHTML 6.00.2900.3157" name="GENERATOR"></head>
+<body>
+<tc></tc>
+<table style="text-align: left; width: 872px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: center; height: 33px; background-color: rgb(51, 51, 255); width: 1005px;" colspan="2"><big style="font-weight: bold; color: white;"><big>Drawing
+Functions</big></big></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: rgb(91, 128, 255); width: 105px;">
+<a style="font-weight: bold; color: white;" href="Primitives.html">Primitives</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Polygon.html">Polygon</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Transform.html">Transform</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Surface.html">Surface</a><br style="font-weight: bold; color: white;">
+<span style="font-weight: bold; color: black;">Drawing</span><br><a style="font-weight: bold; color: white;" href="Dirty%20Rects.html">Dirty Rect</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Palette.html">Palette</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Control.html">Control</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Misc.html">Misc</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Defines.html">Defines</a><br><a style="color: white; font-weight: bold;" href="Types.html">Types</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Extended.html">Extended</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Arguments.html">Arguments</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="index.html">Index</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Credits.html">Credits</a><br>
+</td>
+<td style="vertical-align: top; height: 600px; width: 1005px;"><br>
+<table style="text-align: left; margin-left: 30px; width: 938px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="width: 103px;">Return</td>
+<td style="width: 247px;">Name</td>
+<td style="width: 560px;">Arguments</td>
+</tr>
+<tr>
+<td style="width: 103px;"><span style="color: rgb(153, 51, 153);">Uint32</span></td>
+<td style="font-weight: bold; width: 247px;">SPG_GetPixel</td>
+<td style="width: 560px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y</td>
+</tr>
+<tr>
+<td style="width: 103px;"><span style="color: rgb(51, 102, 255);">int</span></td>
+<td style="font-weight: bold; width: 247px;">SPG_Blit</td>
+<td style="width: 560px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;Src,&nbsp;<span style="color: red; font-weight: bold;">SDL_Rect</span><span style="color: red;">*</span> srcRect,<span style="font-weight: bold;"><br>
+</span><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;Dest,&nbsp;<span style="color: red; font-weight: bold;">SDL_Rect</span><span style="color: red;">*</span> destRect</td>
+</tr>
+<tr>
+<td style="width: 103px;">void</td>
+<td style="font-weight: bold; width: 247px;">SPG_SetBlit</td>
+<td style="width: 560px;"><span style="font-style: italic;">void (*<span style="font-weight: bold; color: rgb(102, 102, 102);">Blit_Fn</span>)(SDL_Surface*,
+SDL_Rect*, SDL_Surface*, SDL_Rect*)</span></td>
+</tr>
+<tr>
+<td style="width: 103px;"><span style="font-style: italic; font-weight: bold; color: rgb(102, 102, 102);">&lt;Blit_Fn&gt;</span></td>
+<td style="font-weight: bold; width: 247px;">SPG_GetBlit</td>
+<td style="width: 560px;">none</td>
+</tr>
+<tr><td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span></td><td><span style="font-weight: bold;">SPG_ReplaceColor</span></td><td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;src, <span style="color: red; font-weight: bold;">SDL_Rect</span><span style="color: red;">*</span> srcrect,&nbsp;<span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span> dest,&nbsp;<span style="color: red; font-weight: bold;">SDL_Rect</span><span style="color: red;">*</span> destrect,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span> color</td></tr><tr>
+<td style="width: 103px;">void</td>
+<td style="font-weight: bold; width: 247px;">SPG_Draw</td>
+<td style="width: 560px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;source,
+<span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;dest,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16 </span>x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16 </span>y</td>
+</tr>
+<tr><td>void</td><td><span style="font-weight: bold;">SPG_DrawCenter</span></td><td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;source,
+<span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;dest,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16 </span>x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16 </span>y</td></tr><tr>
+<td style="width: 103px;">void</td>
+<td style="font-weight: bold; width: 247px;">SPG_DrawBlit</td>
+<td style="width: 560px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;img, <span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;dest,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16 </span>x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16 </span>y</td>
+</tr>
+<tr>
+<td style="width: 103px;">void</td>
+<td style="font-weight: bold; width: 247px;">SPG_PixelPattern</td>
+<td style="width: 560px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,
+<span style="color: red; font-weight: bold;">SDL_Rect</span>
+target,<br>
+<span style="color: rgb(94, 113, 150);">SPG_bool*</span>
+pattern, <span style="color: rgb(153, 51, 153);">Uint32*</span>
+colors</td>
+</tr>
+<tr>
+<td style="width: 103px;">void</td>
+<td style="font-weight: bold; width: 247px;">SPG_PixelPatternBlend</td>
+<td style="width: 560px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: red; font-weight: bold;">SDL_Rect</span>
+target,<br>
+<span style="color: rgb(94, 113, 150);">SPG_bool*</span>
+pattern, <span style="color: rgb(153, 51, 153);">Uint32*</span>
+colors,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8*</span><span style="color: rgb(0, 102, 0);"></span> pixelAlpha</td>
+</tr>
+<tr>
+<td style="width: 103px;">void</td>
+<td style="font-weight: bold; width: 247px;">SPG_Fill</td>
+<td style="width: 560px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span> color</td>
+</tr>
+<tr>
+<td style="width: 103px;">void</td>
+<td style="font-weight: bold; width: 247px;">SPG_FillAlpha</td>
+<td style="width: 560px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td>
+</tr>
+<tr>
+<td style="width: 103px;">void</td>
+<td style="font-weight: bold; width: 247px;">SPG_FloodFill</td>
+<td style="width: 560px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;dst,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+x,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color</td>
+</tr>
+<tr>
+<td style="width: 103px;">void</td>
+<td style="width: 247px;"><span style="font-weight: bold;">SPG_BlockRead8</span></td>
+<td style="width: 560px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">* </span>Surface,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8* </span>block, <span style="color: rgb(30, 209, 53);">Sint16</span> y</td>
+</tr>
+<tr>
+<td style="width: 103px;">void</td>
+<td style="width: 247px;"><span style="font-weight: bold;">SPG_BlockRead16</span></td>
+<td style="width: 560px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span> Surface, <span style="color: rgb(226, 94, 98);">Uint16*</span>
+block,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y</td>
+</tr>
+<tr>
+<td style="width: 103px;">void</td>
+<td style="width: 247px;"><span style="font-weight: bold;">SPG_BlockRead32</span></td>
+<td style="width: 560px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>
+Surface,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32*
+</span>block,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span> y</td>
+</tr>
+<tr>
+<td style="width: 103px;">void</td>
+<td style="width: 247px;"><span style="font-weight: bold;">SPG_BlockWrite8</span></td>
+<td style="width: 560px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">* </span>Surface,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8* </span>block, <span style="color: rgb(30, 209, 53);">Sint16</span> y</td>
+</tr>
+<tr>
+<td style="width: 103px;">void</td>
+<td style="width: 247px;"><span style="font-weight: bold;">SPG_BlockWrite16</span></td>
+<td style="width: 560px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span> Surface, <span style="color: rgb(226, 94, 98);">Uint16*</span>
+block,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span>
+y</td>
+</tr>
+<tr>
+<td style="width: 103px;">void</td>
+<td style="width: 247px;"><span style="font-weight: bold;">SPG_BlockWrite32</span></td>
+<td style="width: 560px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>
+Surface,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32*
+</span>block,&nbsp;<span style="color: rgb(30, 209, 53);">Sint16</span> y</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+Uint32 SPG_GetPixel(SDL_Surface *surface, Sint16 x, Sint16 y)<br>
+- Returns the pixel's color value at (x,y) in the given surface's
+format.<br>
+<br>
+int SPG_Blit(SDL_Surface *Src, SDL_Rect* srcRect, SDL_Surface *Dest,
+SDL_Rect* destRect)<br>
+-
+Draws the data from Src within the area defined by srcRect to destRect
+on Dest.&nbsp; Performs the alpha-blending modes, can combine
+per-pixel
+and per-surface alpha, and is non-destructive of the given SDL_Rects.
+&nbsp;Alpha-blending modes will only work on 32-bit RGBA surfaces.<br>
+The available blitting modes are:<br>
+<table style="text-align: left; margin-right: auto; margin-left: 37px; width: 911px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="width: 215px;"><font size="-1">Name</font></td>
+<td style="width: 56px;"><font size="-1">RGB</font></td>
+<td style="width: 56px;"><font size="-1">Alpha</font></td><td style="width: 337px;">Description</td>
+</tr>
+<tr>
+<td style="width: 215px;"><font size="-1">SPG_DEST_ALPHA</font></td>
+<td style="width: 56px;"><font size="-1">Blend</font></td>
+<td style="width: 56px;"><font size="-1">Dest</font></td><td style="width: 337px;">Blends colors normally and keeps the destination per-pixel alpha. &nbsp;This is the same as SDL_BlitSurface's blending.</td>
+</tr>
+<tr>
+<td style="width: 215px;"><font size="-1">SPG_SRC_ALPHA</font></td>
+<td style="width: 56px;"><font size="-1">Blend</font></td>
+<td style="width: 56px;"><font size="-1">Src</font></td><td style="width: 337px;">Blends colors and copies the source alpha.</td>
+</tr>
+<tr>
+<td style="width: 215px;"><font size="-1">SPG_COMBINE_ALPHA</font></td>
+<td style="width: 56px;"><font size="-1">Blend</font></td>
+<td style="width: 56px;"><font size="-1">Blend</font></td><td style="width: 337px;">Blends colors and blends the alpha. &nbsp;This is "True" blending and lends well to some neat compositing effects.</td>
+</tr>
+
+<tr>
+<td style="width: 215px;"><font size="-1">SPG_COPY_NO_ALPHA</font></td>
+<td style="width: 56px;"><font size="-1">Src</font></td>
+<td style="width: 56px;"><font size="-1">Opaque</font></td><td style="width: 337px;">Copies the source color, sets the dest alpha to opaque.</td>
+</tr>
+<tr>
+<td style="width: 215px;"><font size="-1">SPG_COPY_DEST_ALPHA</font></td>
+<td style="width: 56px;"><font size="-1">Src</font></td>
+<td style="width: 56px;"><font size="-1">Dest</font></td><td style="width: 337px;">Copies the source color, keeps the dest alpha.</td>
+</tr>
+<tr>
+<td style="width: 215px;"><font size="-1">SPG_COPY_SRC_ALPHA</font></td>
+<td style="width: 56px;"><font size="-1">Src</font></td>
+<td style="width: 56px;"><font size="-1">Src</font></td><td style="width: 337px;">Copies the source color and alpha.</td>
+</tr>
+<tr>
+<td style="width: 215px;"><font size="-1">SPG_COPY_COMBINE_ALPHA</font></td>
+<td style="width: 56px;"><font size="-1">Src</font></td>
+<td style="width: 56px;"><font size="-1">Blend</font></td><td style="width: 337px;">Copies the source color and blends the alpha.</td>
+</tr>
+
+<tr>
+<td style="width: 215px;"><font size="-1">SPG_COPY_ALPHA_ONLY</font></td>
+<td style="width: 56px;"><small>Dest</small></td>
+<td style="width: 56px;"><small>Src</small></td><td style="width: 337px;">Keeps the dest color, but copies the source alpha.</td>
+</tr>
+<tr>
+<td style="width: 215px;"><small>SPG_COMBINE_ALPHA_ONLY</small></td>
+<td style="width: 56px;"><small>Dest</small></td>
+<td style="width: 56px;"><small>Blend</small></td><td style="width: 337px;">Keeps the dest color, but blends the alpha.</td>
+</tr>
+<tr>
+<td style="width: 215px;"><small>SPG_REPLACE_COLORKEY</small></td>
+<td style="width: 56px;"><small>Src</small></td>
+<td style="width: 56px;"><small>Src</small></td><td style="width: 337px;">If
+the destination surface has the SDL_SRCCOLORKEY flag, this replaces the
+dest colorkey color in the image with the source color and alpha.
+&nbsp;This is similar to palette-swapping, but can be used with
+gradients and other images.</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+void&nbsp;SPG_SetBlit(void (*blitfn)(SDL_Surface*, SDL_Rect*,
+SDL_Surface*, SDL_Rect*))<br>
+- Sets the custom blitting function used by SPG_Blit to the given
+function.<br><br>&lt;Blit_Fn&gt; SPG_GetBlit()<br>- Returns the current blitting function.<br><br>SDL_Surface* SPG_ReplaceColor(SDL_Surface* src, SDL_Rect* srcrect, SDL_Surface* dest, SDL_Rect* destrect, Uint32 color)<br>
+- Returns a new surface with the given color replaced by
+the corresponding pixels from the src surface. &nbsp;This is an effect
+similar to palette-swapping on 8-bit surfaces, but allows for images
+and gradients to replace the color.<br><br>
+void SPG_Draw(SDL_Surface* source, SDL_Surface* dest, Sint16 x, Sint16
+y)<br>
+- Quick convenience call for SDL_BlitSurface.<br><br>void SPG_DrawCenter(SDL_Surface* source, SDL_Surface* dest, Sint16 x, Sint16 y)<br>
+- Blits an image centered on the given coordinates.<br><br>
+void SPG_DrawBlit(SDL_Surface* img, SDL_Surface* dest, Sint16 x, Sint16
+y)<br>
+- Quick convenience call for SPG_Blit.<br>
+<br>
+void SPG_PixelPattern(SDL_Surface *surface, SDL_Rect target, SPG_bool*
+pattern, Uint32* colors)<br>
+-
+Draws a pattern of pixels defined by the given bit pattern to the area
+represented by 'target' on the given surface.&nbsp; You provide an
+array of 1's and 0's that tell the function where to draw, and an array
+of colors to tell it what to draw.<br>
+<br>
+void SPG_PixelPatternBlend(SDL_Surface *surface, SDL_Rect target,
+SPG_bool* pattern, Uint32* colors, Uint8* pixelAlpha)<br>
+-
+Alpha-blends a pattern of pixels defined by the given bit pattern to
+the area represented by 'target' on the given surface.&nbsp; You
+provide an array of 1's and 0's that tell the function where to draw,
+an array of colors to tell it what to draw, and an array of alpha
+values to tell it how to blend.<br>
+<br>
+void SPG_Fill(SDL_Surface *surface, Uint32 color)<br>
+- Changes every pixel on the surface to the given color value.<br>
+<br>
+void SPG_FillAlpha(SDL_Surface *surface, Uint32 color, Uint8 alpha)<br>
+- Changes every pixel on the surface to the given color value (includes
+alpha value).<br>
+<br>
+void SPG_FloodFill(SDL_Surface *dst, Sint16 x, Sint16 y, Uint32 color)<br>
+- Changes the color of all pixels contiguous to (x,y) to the given
+color.<br>
+<br>
+void SPG_BlockRead8(SDL_Surface *Surface, Uint8 *block, Sint16 y)<br>
+- Reads an entire scanline of 8-bit data from the surface<br>
+<br>
+void SPG_BlockRead16(SDL_Surface *Surface, Uint16 *block, Sint16 y)<br>
+- Reads an entire scanline of 16-bit data from the surface<br>
+<br>
+void SPG_BlockRead32(SDL_Surface *Surface, Uint32 *block, Sint16 y)<br>
+- Reads an entire scanline of 32-bit data from the surface<br>
+<br>
+void SPG_BlockWrite8(SDL_Surface *Surface, Uint8 *block, Sint16 y)<br>
+- Writes an entire scanline of data to target 8-bit surface<br>
+<br>
+void SPG_BlockWrite16(SDL_Surface *Surface, Uint16 *block, Sint16 y)<br>
+- Writes an entire scanline of data to target 16-bit surface<br>
+<br>
+void SPG_BlockWrite32(SDL_Surface *Surface, Uint32 *block, Sint16 y)<br>
+- Writes an entire scanline of data to target 32-bit surface<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+SPriG v1.0.0 Documentation by Jonathan Dearborn 2008
+</body></html>

@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<!-- saved from url=(0031)http://pubpages.unh.edu/~jmb97/ --><title>Surface - SPriG</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta content="MSHTML 6.00.2900.3157" name="GENERATOR">
+</head>
+<body>
+<tc></tc>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: center; height: 33px; background-color: rgb(51, 51, 255); width: 1076px;" colspan="2"><big style="font-weight: bold; color: white;"><big>Surface
+Functions</big></big></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: rgb(91, 128, 255); width: 105px;">
+<a style="font-weight: bold; color: white;" href="Primitives.html">Primitives</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Polygon.html">Polygon</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Transform.html">Transform</a><br style="font-weight: bold; color: white;">
+<span style="font-weight: bold; color: black;">Surface</span><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Drawing.html">Drawing</a><br>
+<a style="font-weight: bold; color: white;" href="Dirty%20Rects.html">Dirty Rect</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Palette.html">Palette</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Control.html">Control</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Misc.html">Misc</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Defines.html">Defines</a><br>
+<a style="color: white; font-weight: bold;" href="Types.html">Types</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Extended.html">Extended</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Arguments.html">Arguments</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="index.html">Index</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Credits.html">Credits</a><br>
+</td>
+<td style="vertical-align: top; height: 600px; width: 1076px;"><br>
+<table style="text-align: left; margin-left: 30px; width: 886px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="width: 144px;">Return</td>
+<td style="width: 243px;">Name</td>
+<td style="width: 377px;">Arguments</td>
+</tr>
+<tr>
+<td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span></td>
+<td style="font-weight: bold;">SPG_CreateSurface<br>
+(SPG_CreateSurface32)</td>
+<td><span style="color: rgb(153, 51, 153);">Uint32</span>&nbsp;flags,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>&nbsp;width,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>&nbsp;height</td>
+</tr>
+<tr>
+<td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span></td>
+<td style="font-weight: bold;">SPG_CreateSurface8</td>
+<td><span style="color: rgb(153, 51, 153);">Uint32</span>&nbsp;flags,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>&nbsp;width,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>&nbsp;height</td>
+</tr>
+<tr>
+<td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span></td>
+<td style="font-weight: bold;">SPG_CreateSurface16</td>
+<td><span style="color: rgb(153, 51, 153);">Uint32</span>&nbsp;flags,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>&nbsp;width,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>&nbsp;height</td>
+</tr>
+<tr>
+<td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span></td>
+<td style="font-weight: bold;">SPG_CreateSurface16Alpha</td>
+<td><span style="color: rgb(153, 51, 153);">Uint32</span>&nbsp;flags,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>&nbsp;width,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>&nbsp;height</td>
+</tr>
+<tr>
+<td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span></td>
+<td style="font-weight: bold;">SPG_CreateSurface24</td>
+<td><span style="color: rgb(153, 51, 153);">Uint32</span>&nbsp;flags,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>&nbsp;width,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>&nbsp;height</td>
+</tr>
+<tr>
+<td style="width: 144px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span></td>
+<td style="width: 243px; font-weight: bold;">SPG_CreateSurfaceFrom</td>
+<td style="width: 377px;">void*
+linearArray,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>&nbsp;width,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>&nbsp;height,
+<span style="font-weight: bold; color: rgb(153, 102, 51);">SDL_PixelFormat</span><span style="color: rgb(153, 102, 51);">*</span> format</td>
+</tr>
+<tr>
+<td>void</td>
+<td><span style="font-weight: bold;">SPG_Free</span></td>
+<td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface</td>
+</tr>
+<tr>
+<td style="width: 144px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span></td>
+<td style="width: 243px; font-weight: bold;">SPG_CopySurface</td>
+<td style="width: 377px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;src</td>
+</tr>
+<tr>
+<td style="width: 144px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span></td>
+<td style="width: 243px; font-weight: bold;">SPG_DisplayFormat</td>
+<td style="width: 377px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surf</td>
+</tr>
+<tr>
+<td style="width: 144px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span></td>
+<td style="width: 243px; font-weight: bold;">SPG_DisplayFormatAlpha</td>
+<td style="width: 377px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surf</td>
+</tr>
+<tr>
+<td style="width: 144px;">void</td>
+<td style="width: 243px; font-weight: bold;">SPG_SetSurfaceAlpha</td>
+<td style="width: 377px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span> alpha</td>
+</tr>
+<tr>
+<td style="width: 144px;">void</td>
+<td style="width: 243px; font-weight: bold;">SPG_SetColorkey</td>
+<td style="width: 377px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;img,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span> color</td>
+</tr>
+<tr>
+<td style="width: 144px;">void</td>
+<td style="width: 243px; font-weight: bold;">SPG_SetClip</td>
+<td style="width: 377px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface,&nbsp;<span style="font-weight: bold; color: red;"></span><span style="color: red;">const </span><span style="font-weight: bold; color: red;">SDL_Rect</span><span style="color: red;"></span> rect</td>
+</tr>
+<tr>
+<td><span style="color: red;"> </span><span style="font-weight: bold; color: red;">SDL_Rect</span><span style="color: red;"></span> rect</td>
+<td><span style="font-weight: bold;">SPG_GetClip</span></td>
+<td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface</td>
+</tr>
+<tr>
+<td style="width: 144px;">void</td>
+<td style="width: 243px; font-weight: bold;">SPG_RestoreClip</td>
+<td style="width: 377px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span>&nbsp;surface</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+SDL_Surface*&nbsp;&nbsp;&nbsp; SPG_CreateSurface(Uint32
+flags, Uint16 width, Uint16 height)<br>
+- Returns a new 32-bit RGBA surface with the given attributes.
+&nbsp;This is the same as SPG_CreateSurface32.<br>
+<br>
+SDL_Surface* SPG_CreateSurface8(Uint32 flags, Uint16 width, Uint16
+height)<br>
+- Returns a new 8-bit palettized surface with the given attributes.<br>
+<br>
+SDL_Surface* SPG_CreateSurface16(Uint32 flags, Uint16 width, Uint16
+height)<br>
+- Returns a new 16-bit RGB surface with the given attributes in 5-5-5 format.<br>
+<br>
+SDL_Surface* SPG_CreateSurface16Alpha(Uint32 flags, Uint16 width, Uint16
+height)<br>
+- Returns a new 16-bit RGBA surface with the given attributes in 4-4-4-4 format.<br>
+<br>
+SDL_Surface* SPG_CreateSurface24(Uint32 flags, Uint16 width, Uint16
+height)<br>
+- Returns a new 24-bit RGB surface with the given attributes.<br>
+<br>
+SDL_Surface*&nbsp;&nbsp;&nbsp;
+SPG_CreateSurfaceFrom(void* linearArray, Uint16 width, Uint16
+height, SDL_PixelFormat* format)<br>
+- Returns a new surface from the pixel data in 'linearArray'.<br>
+<br>
+SDL_Surface*&nbsp;&nbsp;&nbsp; SPG_CopySurface(SDL_Surface
+*src)<br>
+- Returns a copy of the given surface.<br>
+<br>
+SDL_Surface*&nbsp;&nbsp;&nbsp;
+SPG_DisplayFormatAlpha(SDL_Surface* surf)<br>
+- Returns the result of converting a surface to the display format and
+frees the original surface.<br>
+<br>
+void&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPG_SetSurfaceAlpha(SDL_Surface* surface, Uint8 alpha)<br>
+- Sets the per-surface alpha value for convenient surface transparency.<br>
+<br>
+void&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPG_SetColorkey(SDL_Surface* img, Uint32 color)<br>
+- Sets the given color on the given surface as fully transparent.<br>
+<br>
+void&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPG_SetClip(SDL_Surface* surface, SDL_Rect&amp; rect)<br>
+- Sets the drawing area of 'surface' to 'rect'.<br>
+<br>
+SDL_Rect SPG_GetClip(SDL_Surface* surface)<br>
+- Returns the current clip rect of the surface.<br>
+<br>
+void&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPG_RestoreClip(SDL_Surface* surface)<br>
+- Sets the drawing area of 'surface' to its original dimensions.<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+SPriG v1.0.0 Documentation by Jonathan Dearborn 2008
+</body></html>

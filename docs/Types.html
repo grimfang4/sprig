@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><!-- saved from url=(0031)http://pubpages.unh.edu/~jmb97/ -->
+
+
+<title>Types - SPriG</title><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta content="MSHTML 6.00.2900.3157" name="GENERATOR"></head>
+<body>
+<tc></tc>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: center; height: 33px; background-color: rgb(51, 51, 255); width: 1076px;" colspan="2"><big style="font-weight: bold; color: white;"><big>Types</big></big></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: rgb(91, 128, 255); width: 105px;">
+<a style="font-weight: bold; color: white;" href="Primitives.html">Primitives</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Polygon.html">Polygon</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Transform.html">Transform</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Surface.html">Surface</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Drawing.html">Drawing</a><br><a style="font-weight: bold; color: white;" href="Dirty%20Rects.html">Dirty Rect</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Palette.html">Palette</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Control.html">Control</a><a style="font-weight: bold; color: white;" href="States.html"></a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Misc.html">Misc</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Defines.html">Defines</a><br><span style="font-weight: bold; color: black;">Types</span><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Extended.html">Extended</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Arguments.html">Arguments</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="index.html">Index</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Credits.html">Credits</a><br>
+</td>
+<td style="vertical-align: top; height: 600px; width: 1076px;"><br>
+<table style="text-align: left; margin-left: 30px; width: 856px; height: 682px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+
+<td style="width: 175px;">Name</td>
+<td style="width: 478px;">Description</td>
+</tr>
+
+
+
+
+<tr>
+
+<td style="width: 175px;"><span style="color: rgb(94, 113, 150);">SPG_bool</span></td>
+<td style="width: 478px;">This
+is a define that makes the SPG_bool type identical to Uint8.
+&nbsp;Booleans in C++ &nbsp;(and any other language) are 8 bits in
+memory for architecture reasons, despite the fact that they hold only 1
+bit of information.<span style="color: rgb(0, 0, 153);"><span style="color: black;"></span><span style="font-weight: bold;"><br></span></span></td>
+</tr>
+<tr>
+
+<td style="width: 175px; font-weight: bold;"><span style="color: rgb(102, 102, 0);"><span style="font-weight: bold;">SPG_DirtyTable</span></span></td>
+<td style="width: 478px;">{<br>Uint16 size;<br>SDL_Rect* rects;<br>Uint16 count;<br>Uint16 best;<br>}<br><br>This
+is a struct to hold dirty rect information. &nbsp;When you retrieve the
+front table using SPG_DirtyUpdate(), you should loop over the table to
+replace the background image.<br><br>Example:<br>&nbsp; SPG_DirtyTable* table = SPG_DirtyUpdate(screen);<br>&nbsp; int i;<br>&nbsp; for(i = 0; i &lt; table-&gt;count; i++)<br>&nbsp; {<br>&nbsp; // Blit background to table-&gt;rects[i]<br>&nbsp; SDL_BlitSurface(mybackground, &amp;bgrect, screen, &amp;(table-&gt;rects[i]);<br>&nbsp; }<br></td>
+</tr>
+<tr>
+
+<td style="width: 175px; font-weight: bold;"><span style="font-weight: bold; color: rgb(255, 102, 0);">SPG_Point</span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);"></span></span></td>
+<td style="width: 478px;">{<br>float x;<br>float y;<br>}<br><br>A struct to hold coordinate data (position, velocity, etc.). &nbsp;It can be initialized like so:<br>SPG_Point mypoint = {30, 40};<br>or<br>mypoint = SPG_MakePoint(30, 40);</td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+SPriG v1.0.0 Documentation by Jonathan Dearborn 2008
+</body></html>

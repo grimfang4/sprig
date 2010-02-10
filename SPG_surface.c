@@ -91,7 +91,7 @@ void spg_pixelX(SDL_Surface *dest,Sint16 x,Sint16 y,Uint32 color);
 void SPG_EnableAutolock(SPG_bool enable)
 { spg_autolock = enable;}
 
-SPG_bool SPG_GetAutolock()
+SPG_bool SPG_GetAutolock(void)
 { return spg_autolock;}
 
 
@@ -103,7 +103,7 @@ void SPG_PushThickness(Uint16 state)
     spg_thickness_state = node;
     spg_thickness = state;
 }
-Uint16 SPG_PopThickness()
+Uint16 SPG_PopThickness(void)
 {
     if(spg_thickness_state == NULL)
     {
@@ -113,13 +113,12 @@ Uint16 SPG_PopThickness()
         return 1;
     }
     struct spg_uint16_node* temp = spg_thickness_state;
-    Uint16 result = spg_thickness_state->datum;
+    spg_thickness = spg_thickness_state->datum;
     spg_thickness_state = spg_thickness_state->next;
     free(temp);
-    spg_thickness = spg_thickness_state->datum;
-    return result;
+    return spg_thickness;
 }
-Uint16 SPG_GetThickness()
+Uint16 SPG_GetThickness(void)
 {
     return spg_thickness;
 }
@@ -131,7 +130,7 @@ void SPG_PushBlend(Uint8 state)
     node->next = spg_blend_state;
     spg_blend_state = node;
 }
-Uint8 SPG_PopBlend()
+Uint8 SPG_PopBlend(void)
 {
     if(spg_blend_state == NULL)
     {
@@ -145,7 +144,7 @@ Uint8 SPG_PopBlend()
     free(temp);
     return result;
 }
-Uint8 SPG_GetBlend()
+Uint8 SPG_GetBlend(void)
 {
     if(spg_blend_state == NULL)
     {
@@ -164,7 +163,7 @@ void SPG_PushAA(SPG_bool state)
     node->next = spg_aa_state;
     spg_aa_state = node;
 }
-SPG_bool SPG_PopAA()
+SPG_bool SPG_PopAA(void)
 {
     if(spg_aa_state == NULL)
     {
@@ -178,7 +177,7 @@ SPG_bool SPG_PopAA()
     free(temp);
     return result;
 }
-SPG_bool SPG_GetAA()
+SPG_bool SPG_GetAA(void)
 {
     if(spg_aa_state == NULL)
     {
@@ -197,7 +196,7 @@ void SPG_PushSurfaceAlpha(SPG_bool state)
     node->next = spg_blit_surface_alpha_state;
     spg_blit_surface_alpha_state = node;
 }
-SPG_bool SPG_PopSurfaceAlpha()
+SPG_bool SPG_PopSurfaceAlpha(void)
 {
     if(spg_blit_surface_alpha_state == NULL)
     {
@@ -211,7 +210,7 @@ SPG_bool SPG_PopSurfaceAlpha()
     free(temp);
     return result;
 }
-SPG_bool SPG_GetSurfaceAlpha()
+SPG_bool SPG_GetSurfaceAlpha(void)
 {
     if(spg_blit_surface_alpha_state == NULL)
     {
@@ -246,7 +245,7 @@ void SPG_Error(const char* err)
     _spg_numerrors++;
 }
 
-char* SPG_GetError()
+char* SPG_GetError(void)
 {
     if(_spg_numerrors == 0 || _spg_errors == NULL)
         return NULL;
@@ -259,7 +258,7 @@ char* SPG_GetError()
     return result;
 }
 
-Uint16 SPG_NumErrors()
+Uint16 SPG_NumErrors(void)
 {
     return _spg_numerrors;
 }
@@ -734,7 +733,7 @@ void SPG_SetBlit(void (*blitfn)(SDL_Surface*, SDL_Rect*, SDL_Surface*, SDL_Rect*
     spg_blitfunc = blitfn;
 }
 
-void (*SPG_GetBlit())(SDL_Surface*, SDL_Rect*, SDL_Surface*, SDL_Rect*)
+void (*SPG_GetBlit(void))(SDL_Surface*, SDL_Rect*, SDL_Surface*, SDL_Rect*)
 {
     return spg_blitfunc;
 }
@@ -794,7 +793,7 @@ SDL_Surface* SPG_ReplaceColor(SDL_Surface* src, SDL_Rect* srcrect, SDL_Surface* 
 
 // Returns an 8-bit rainbow palette with 256 colors.
 // Code adapted from SDL_DitherColors in SDL_pixels.c
-SDL_Color* SPG_ColorPalette()
+SDL_Color* SPG_ColorPalette(void)
 {
     SDL_Color* colors = (SDL_Color*)malloc(sizeof(SDL_Color)*256);
     int i;
@@ -818,7 +817,7 @@ SDL_Color* SPG_ColorPalette()
 }
 
 // Returns an 8-bit black and white (grayscale) palette with 256 colors.
-SDL_Color* SPG_GrayPalette()
+SDL_Color* SPG_GrayPalette(void)
 {
     SDL_Color* colors = (SDL_Color*)malloc(sizeof(SDL_Color)*256);
     int i;

@@ -17,6 +17,41 @@
 
 #include "sprig.h"
 
+
+
+const SDL_version SPG_LinkedVersion(void)
+{
+    SDL_version version = { SPG_VER, SPG_VER_MINOR, SPG_VER_BUGFIX };
+    return version;
+}
+
+SPG_bool SPG_Probe(int option)
+{
+    #ifdef SPG_C_AND_CPP
+    if(option == SPG_C_AND_CPP)
+        return 1;
+    #endif
+    #ifdef SPG_USE_EXTENDED
+    if(option == SPG_USE_EXTENDED)
+        return 1;
+    #endif
+    #ifdef SPG_USE_FAST_MATH
+    if(option == SPG_USE_FAST_MATH)
+        return 1;
+    #endif
+    #ifdef SPG_CPP
+    if(option == SPG_CPP)
+        return 1;
+    #endif
+    #ifdef SPG_C_ONLY
+    if(option == SPG_C_ONLY)
+        return 1;
+    #endif
+    
+    return 0;
+}
+
+
 // Degrees here for nicer-looking tests
 SPG_bool spg_usedegrees = 1;
 
@@ -25,7 +60,7 @@ void SPG_EnableRadians(SPG_bool enable)
     spg_usedegrees = !enable;
 }
 
-SPG_bool SPG_GetRadians()
+SPG_bool SPG_GetRadians(void)
 {
     return !spg_usedegrees;
 }
@@ -99,7 +134,7 @@ void SPG_EnableDirty(SPG_bool enable)
     spg_makedirtyrects = enable;
 }
 
-SPG_bool SPG_DirtyEnabled()
+SPG_bool SPG_DirtyEnabled(void)
 {
     return spg_makedirtyrects;
 }
@@ -276,7 +311,7 @@ void SPG_DirtyAddTo(SPG_DirtyTable* table, SDL_Rect* rect)
 	SPG_RectUnion(rect, &table->rects[best_i]);
 }
 
-SPG_DirtyTable* SPG_DirtyGet()
+SPG_DirtyTable* SPG_DirtyGet(void)
 {
     return spg_dirtytable_front;
 }
@@ -335,7 +370,7 @@ SPG_DirtyTable* SPG_DirtyUpdate(SDL_Surface* screen)
     return NULL;  // User can test and choose to update entire screen or whatever
 }
 
-void SPG_DirtySwap()
+void SPG_DirtySwap(void)
 {
     if(spg_dirtytable_front != NULL && spg_dirtytable_back != NULL)
     {

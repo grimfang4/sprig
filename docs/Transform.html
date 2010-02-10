@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><!-- saved from url=(0031)http://pubpages.unh.edu/~jmb97/ -->
+
+
+<title>Transform - SPriG</title><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta content="MSHTML 6.00.2900.3157" name="GENERATOR"></head>
+<body>
+<tc></tc>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: center; height: 33px; background-color: rgb(51, 51, 255); width: 1076px;" colspan="2"><big style="font-weight: bold; color: white;"><big>Transform Functions</big></big></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: rgb(91, 128, 255); width: 105px;">
+<a style="font-weight: bold; color: white;" href="Primitives.html">Primitives</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Polygon.html">Polygon</a><br style="font-weight: bold; color: white;">
+<span style="font-weight: bold; color: black;">Transform</span><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Surface.html">Surface</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Drawing.html">Drawing</a><br><a style="font-weight: bold; color: white;" href="Dirty%20Rects.html">Dirty Rect</a><br style="font-weight: bold; color: white;">
+<a style="color: white;" href="Palette.html"><span style="font-weight: bold;">Palette</span></a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Control.html">Control</a><a style="font-weight: bold; color: white;" href="States.html"></a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Misc.html">Misc</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Defines.html">Defines</a><br><a style="color: white; font-weight: bold;" href="Types.html">Types</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Extended.html">Extended</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Arguments.html">Arguments</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="index.html">Index</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Credits.html">Credits</a><br>
+</td>
+<td style="vertical-align: top; height: 600px; width: 1076px;"><br><table style="text-align: left; width: 762px; margin-left: 30px;" border="1" cellpadding="2" cellspacing="2"><tbody><tr><td style="width: 133px;">Return</td><td style="width: 236px;">Name</td><td style="width: 478px;">Arguments</td></tr><tr><td style="width: 133px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span>*</span></td><td style="width: 236px;"><span style="font-weight: bold;">SPG_Transform</span></td><td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span>* </span>src, <span style="color: rgb(153, 51, 153);">Uint32</span> bgColor,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> angle,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> xscale,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> yscale,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span> flags</td></tr><tr><td style="width: 133px;"><span style="font-weight: bold; color: red;">SDL_Rect</span></td><td style="width: 236px;"><span style="font-weight: bold;">SPG_TransformX</span></td><td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span>* </span>src,&nbsp;<span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span>* </span>dst,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> angle,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> xscale,&nbsp;<span style="color: rgb(255, 102, 0);">float</span>
+yscale, <span style="color: rgb(226, 94, 98);">Uint16</span> destx,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span> desty,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span> pivotx,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span> pivoty, <span style="color: rgb(0, 102, 0);">Uint8</span> flags</td></tr><tr><td style="width: 133px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span></td><td style="width: 236px;"><span style="font-weight: bold;">SPG_Rotate</span></td><td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span>* </span>src,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> angle, <span style="color: rgb(153, 51, 153);">Uint32</span> bgColor = 0</td></tr><tr><td style="width: 133px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span></td><td style="width: 236px; font-weight: bold;">SPG_RotateAA</td><td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span>* </span>src,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> angle, <span style="color: rgb(153, 51, 153);">Uint32</span> bgColor = 0</td></tr><tr><td style="width: 133px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span></td><td style="width: 236px;"><span style="font-weight: bold;">SPG_Scale</span></td><td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span>* </span>src,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> xscale,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> yscale, <span style="color: rgb(153, 51, 153);">Uint32</span> bgColor = 0</td></tr><tr><td style="width: 133px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*</span></td><td style="width: 236px; font-weight: bold;">SPG_ScaleAA</td><td><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span>* </span>src,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> xscale, <span style="color: rgb(255, 102, 0);">float</span> yscale, <span style="color: rgb(153, 51, 153);">Uint32</span> bgColor = 0</td></tr></tbody></table><br><br>SDL_Surface*&nbsp;&nbsp;&nbsp;
+SPG_Transform(SDL_Surface *src, Uint32 bgColor, float angle, float
+xscale, float yscale, Uint8 flags)<br>- Returns a new copy of the given surface after rotation and/or scaling.&nbsp; Uses flags (see notes).<br><br>SDL_Rect&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPG_TransformX(SDL_Surface *src, SDL_Surface *dst, float angle,
+float xscale, float yscale, Uint16 px, Uint16 py, Uint16 qx, Uint16 qy,
+Uint8 flags)<br>- Draws the rotated/scaled source surface onto the dest
+surface.&nbsp; You control the pivot point (p) and the destination
+point (q).&nbsp; Uses flags (see notes).&nbsp; Returns the bounding box
+of the result on the dest surface.<br><br>SDL_Surface*&nbsp;&nbsp;&nbsp; SPG_Rotate(SDL_Surface *src, float angle, Uint32 bgColor = 0)<br>- Returns a new copy of the given surface after rotation.<br><br>SDL_Surface*&nbsp;&nbsp;&nbsp; SPG_RotateAA(SDL_Surface *src, float angle, Uint32 bgColor = 0)<br>- Returns a new copy of the given surface after rotation. &nbsp;Uses anti-aliasing for a smoother result.<br><br>SDL_Surface*&nbsp;&nbsp;&nbsp; SPG_Scale(SDL_Surface *src, float xscale, float yscale, Uint32 bgColor = 0)<br>- Returns a new copy of the given surface after scaling.<br><br>SDL_Surface*&nbsp;&nbsp;&nbsp; SPG_ScaleAA(SDL_Surface *src, float xscale, float yscale, Uint32 bgColor = 0)<br>- Returns a new copy of the given surface after scaling. &nbsp;Uses anti-aliasing for a smoother result.<br><br><br><br><br>Notes:<br>The
+SPG_Transform functions use bit flags that can be OR'ed.&nbsp; SPG_NONE
+is standard rendering, SPG_TAA enables anti-aliasing, SPG_TSAFE takes
+caution with weird bit-depths, SPG_TCOLORKEY enables colorkey
+transparency in SPG_Transform, and SPG_TTMAP uses a faster but uglier
+texture map renderer. &nbsp;SPG_TSLOW uses a slower, but more accurate
+transform. &nbsp;SPG_TBLEND performs alpha-blending and SPG_TSURFACE_ALPHA uses surface alpha on the transform
+(only for SPG_TransformX).<br><br>These functions respect the destination surface's clipping rect. (see SPG_ClipRect)<br>The surface will be automatically locked when necessary. (see SPG_Lock)<br><br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+SPriG v1.0.0 Documentation by Jonathan Dearborn 2008</body></html>

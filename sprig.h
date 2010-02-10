@@ -22,14 +22,14 @@
 #include "SDL.h"
 
 #define SPG_VER 1  // Check this for MISSING functionality
-#define SPG_VER_MINOR 0  // Check this for ADDED functionality
+#define SPG_VER_MINOR 1  // Check this for ADDED functionality
 #define SPG_VER_BUGFIX 0
 
-#define SPG_C_AND_CPP  // undef this if you want to force C under a C++ compiler
-//#define SPG_USE_EXTENDED  // Build Sprig with this to add some extra functions
-#define SPG_DEFINE_PI  // Allow defines of pi variations
+#define SPG_C_AND_CPP 1  // undef this if you want to force C under a C++ compiler
+//#define SPG_USE_EXTENDED 2  // Build Sprig with this to add some extra functions
+#define SPG_DEFINE_PI 3  // Allow defines of pi variations
 #define SPG_MAX_ERRORS 40  // Max size of error message stack
-#define SPG_USE_FAST_MATH // undef this to use math.h's sqrt()
+#define SPG_USE_FAST_MATH 4 // undef this to use math.h's sqrt()
 
 
 
@@ -40,12 +40,12 @@
 */
 #ifdef SPG_C_AND_CPP
 	#ifdef __cplusplus
-		#define SPG_CPP           /* use extern "C" on base functions */
+		#define SPG_CPP 5           /* use extern "C" on base functions */
 	#else
-		#define SPG_C_ONLY       /* remove overloaded functions */
+		#define SPG_C_ONLY 6       /* remove overloaded functions */
 	#endif
 #else
-    #define SPG_C_ONLY
+    #define SPG_C_ONLY 6
 #endif
 
 //PI_8, PI_4, PI_2, PI3_4, PI, PI5_4, PI3_2, PI7_4, PI2
@@ -233,31 +233,35 @@ extern "C" {
 
 
 // MISC
+
+DECLSPEC const SDL_version SPG_LinkedVersion();
+DECLSPEC SPG_bool SPG_Probe(int option);
+
 DECLSPEC SDL_Surface* SPG_InitSDL(Uint16 w, Uint16 h, Uint8 bitsperpixel, Uint32 systemFlags, Uint32 screenFlags);
 
 DECLSPEC void SPG_EnableAutolock(SPG_bool enable);
-DECLSPEC SPG_bool SPG_GetAutolock();
+DECLSPEC SPG_bool SPG_GetAutolock(void);
 
 DECLSPEC void SPG_EnableRadians(SPG_bool enable);
-DECLSPEC SPG_bool SPG_GetRadians();
+DECLSPEC SPG_bool SPG_GetRadians(void);
 
 DECLSPEC void SPG_Error(const char* err);
 DECLSPEC void SPG_EnableErrors(SPG_bool enable);
-DECLSPEC char* SPG_GetError();
-DECLSPEC Uint16 SPG_NumErrors();
+DECLSPEC char* SPG_GetError(void);
+DECLSPEC Uint16 SPG_NumErrors(void);
 
 DECLSPEC void SPG_PushThickness(Uint16 state);
-DECLSPEC Uint16 SPG_PopThickness();
-DECLSPEC Uint16 SPG_GetThickness();
+DECLSPEC Uint16 SPG_PopThickness(void);
+DECLSPEC Uint16 SPG_GetThickness(void);
 DECLSPEC void SPG_PushBlend(Uint8 state);
-DECLSPEC Uint8 SPG_PopBlend();
-DECLSPEC Uint8 SPG_GetBlend();
+DECLSPEC Uint8 SPG_PopBlend(void);
+DECLSPEC Uint8 SPG_GetBlend(void);
 DECLSPEC void SPG_PushAA(SPG_bool state);
-DECLSPEC SPG_bool SPG_PopAA();
-DECLSPEC SPG_bool SPG_GetAA();
+DECLSPEC SPG_bool SPG_PopAA(void);
+DECLSPEC SPG_bool SPG_GetAA(void);
 DECLSPEC void SPG_PushSurfaceAlpha(SPG_bool state);
-DECLSPEC SPG_bool SPG_PopSurfaceAlpha();
-DECLSPEC SPG_bool SPG_GetSurfaceAlpha();
+DECLSPEC SPG_bool SPG_PopSurfaceAlpha(void);
+DECLSPEC SPG_bool SPG_GetSurfaceAlpha(void);
 
 DECLSPEC void SPG_RectOR(const SDL_Rect rect1, const SDL_Rect rect2, SDL_Rect* dst_rect);
 DECLSPEC SPG_bool SPG_RectAND(const SDL_Rect A, const SDL_Rect B, SDL_Rect* intersection);
@@ -268,20 +272,20 @@ DECLSPEC void SPG_EnableDirty(SPG_bool enable);
 DECLSPEC void SPG_DirtyInit(Uint16 maxsize);
 DECLSPEC void SPG_DirtyAdd(SDL_Rect* rect);
 DECLSPEC SPG_DirtyTable* SPG_DirtyUpdate(SDL_Surface* screen);
-DECLSPEC void SPG_DirtySwap();
+DECLSPEC void SPG_DirtySwap(void);
 //  Other stuff
-DECLSPEC SPG_bool SPG_DirtyEnabled();
+DECLSPEC SPG_bool SPG_DirtyEnabled(void);
 DECLSPEC SPG_DirtyTable* SPG_DirtyMake(Uint16 maxsize);
 DECLSPEC void SPG_DirtyAddTo(SPG_DirtyTable* table, SDL_Rect* rect);
 DECLSPEC void SPG_DirtyFree(SPG_DirtyTable* table);
-DECLSPEC SPG_DirtyTable* SPG_DirtyGet();
+DECLSPEC SPG_DirtyTable* SPG_DirtyGet(void);
 DECLSPEC void SPG_DirtyClear(SPG_DirtyTable* table);
 DECLSPEC void SPG_DirtyLevel(Uint16 optimizationLevel);
 DECLSPEC void SPG_DirtyClip(SDL_Surface* screen, SDL_Rect* rect);
 
 // PALETTE
-DECLSPEC SDL_Color* SPG_ColorPalette();
-DECLSPEC SDL_Color* SPG_GrayPalette();
+DECLSPEC SDL_Color* SPG_ColorPalette(void);
+DECLSPEC SDL_Color* SPG_GrayPalette(void);
 DECLSPEC Uint32 SPG_FindPaletteColor(SDL_Palette* palette, Uint8 r, Uint8 g, Uint8 b);
 DECLSPEC SDL_Surface* SPG_PalettizeSurface(SDL_Surface* surface, SDL_Palette* palette);
 

@@ -1,0 +1,240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><!-- saved from url=(0031)http://pubpages.unh.edu/~jmb97/ -->
+
+
+<title>Polygon - SPriG</title><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta content="MSHTML 6.00.2900.3157" name="GENERATOR"></head>
+<body>
+<tc></tc>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: center; height: 33px; background-color: rgb(51, 51, 255); width: 1076px;" colspan="2"><big style="font-weight: bold; color: white;"><big>Polygon
+Functions</big></big></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: rgb(91, 128, 255); width: 105px;">
+<a style="font-weight: bold; color: white;" href="Primitives.html">Primitives</a><br style="font-weight: bold; color: white;">
+<span style="font-weight: bold; color: black;">Polygon</span><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Transform.html">Transform</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Surface.html">Surface</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Drawing.html">Drawing</a><br><a style="font-weight: bold; color: white;" href="Dirty%20Rects.html">Dirty Rect</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Palette.html">Palette</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Control.html">Control</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Misc.html">Misc</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Defines.html">Defines</a><br><a style="color: white; font-weight: bold;" href="Types.html">Types</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Extended.html">Extended</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Arguments.html">Arguments</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="index.html">Index</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Credits.html">Credits</a><br>
+</td>
+<td style="vertical-align: top; height: 600px; width: 1076px;"><br>
+<table style="text-align: left; margin-left: 30px; width: 876px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="width: 81px;">Return</td>
+<td style="width: 175px;">Name</td>
+<td style="width: 517px;">Arguments</td>
+</tr>
+<tr>
+<td>void</td>
+<td><span style="font-weight: bold;">SPG_Trigon</span></td>
+<td style="width: 517px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">* </span>surface,<span style="color: rgb(30, 209, 53);"> Sint16</span> x1,<span style="color: rgb(30, 209, 53);"> Sint16</span> y1,<span style="color: rgb(30, 209, 53);"> Sint16</span> x2,<span style="color: rgb(30, 209, 53);"> Sint16</span> y2,<span style="color: rgb(30, 209, 53);"> Sint16</span> x3,<span style="color: rgb(30, 209, 53);"> Sint16</span> y3,<span style="color: rgb(153, 51, 153);"> Uint32</span> color</td>
+</tr>
+<tr>
+<td>void</td>
+<td><span style="font-weight: bold;">SPG_TrigonBlend</span></td>
+<td style="width: 517px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">* </span>surface,<span style="color: rgb(30, 209, 53);"> Sint16</span> x1,<span style="color: rgb(30, 209, 53);"> Sint16</span> y1,<span style="color: rgb(30, 209, 53);"> Sint16</span> x2,<span style="color: rgb(30, 209, 53);"> Sint16</span> y2,<span style="color: rgb(30, 209, 53);"> Sint16</span> x3,<span style="color: rgb(30, 209, 53);"> Sint16</span> y3,<span style="color: rgb(153, 51, 153);"> Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td>
+</tr>
+<tr>
+<td>void</td>
+<td style="font-weight: bold;">SPG_TrigonFilled</td>
+<td style="width: 517px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">* </span>surface,<span style="color: rgb(30, 209, 53);"> Sint16</span> x1,<span style="color: rgb(30, 209, 53);"> Sint16</span> y1,<span style="color: rgb(30, 209, 53);"> Sint16</span> x2,<span style="color: rgb(30, 209, 53);"> Sint16</span> y2, <span style="color: rgb(30, 209, 53);">Sint16</span> x3,<span style="color: rgb(30, 209, 53);"> Sint16</span> y3, <span style="color: rgb(153, 51, 153);">Uint32</span> color</td>
+</tr>
+<tr>
+<td>void</td>
+<td><span style="font-weight: bold;">SPG_TrigonFilledBlend</span></td>
+<td style="width: 517px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">* </span>surface,<span style="color: rgb(30, 209, 53);"> Sint16</span> x1,<span style="color: rgb(30, 209, 53);"> Sint16</span> y1,<span style="color: rgb(30, 209, 53);"> Sint16</span> x2,<span style="color: rgb(30, 209, 53);"> Sint16</span> y2,<span style="color: rgb(30, 209, 53);"> Sint16</span> x3,<span style="color: rgb(30, 209, 53);"> Sint16</span> y3, <span style="color: rgb(153, 51, 153);">Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td>
+</tr>
+<tr>
+<td>void</td>
+<td><span style="font-weight: bold;">SPG_TrigonFade</span></td>
+<td style="width: 517px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">* </span>surface,<span style="color: rgb(30, 209, 53);"> Sint16</span> x1, <span style="color: rgb(30, 209, 53);">Sint16</span> y1,<span style="color: rgb(30, 209, 53);"> Sint16</span> x2,<span style="color: rgb(30, 209, 53);"> Sint16</span> y2,<span style="color: rgb(30, 209, 53);"> Sint16</span> x3,<span style="color: rgb(30, 209, 53);"> Sint16</span> y3,<span style="color: rgb(153, 51, 153);"><br>
+Uint32</span> color1,<span style="color: rgb(153, 51, 153);">
+Uint32</span> color2, <span style="color: rgb(153, 51, 153);">Uint32</span>
+color3</td>
+</tr>
+<tr>
+<td>void</td>
+<td><span style="font-weight: bold;">SPG_TrigonTex</span></td>
+<td style="width: 517px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">*<span style="color: black;"> dest</span></span>,<span style="color: rgb(30, 209, 53);"> Sint16</span> x1, <span style="color: rgb(30, 209, 53);">Sint16</span> y1, <span style="color: rgb(30, 209, 53);">Sint16</span> x2,<span style="color: rgb(30, 209, 53);"> Sint16</span> y2,<span style="color: rgb(30, 209, 53);"> Sint16</span> x3,<span style="color: rgb(30, 209, 53);"> Sint16</span>
+y3,<span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;"><br>
+SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">* </span>source,<span style="color: rgb(30, 209, 53);"> Sint16</span> sx1, <span style="color: rgb(30, 209, 53);">Sint16</span> sy1,<span style="color: rgb(30, 209, 53);"> Sint16</span> sx2,<span style="color: rgb(30, 209, 53);"> Sint16</span>
+sy2,<span style="color: rgb(30, 209, 53);"> Sint16</span>
+sx3, <span style="color: rgb(30, 209, 53);">Sint16</span>
+sy3</td>
+</tr>
+<tr>
+<td>void</td>
+<td><span style="font-weight: bold;">SPG_TrigonTexPoints</span></td>
+<td style="width: 517px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">* </span>dest,&nbsp;<span style="font-weight: bold; color: rgb(255, 102, 0);">SPG_Point</span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);">*</span> </span>dest_points,<span style="font-weight: bold;"><br>
+</span><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">* </span>source,&nbsp;<span style="font-weight: bold; color: rgb(255, 102, 0);">SPG_Point</span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);">*</span> </span>source_points</td>
+</tr>
+<tr>
+<td>void</td>
+<td><span style="font-weight: bold;">SPG_QuadTex</span></td>
+<td style="width: 517px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">* </span>dest, <span style="color: rgb(30, 209, 53);">Sint16</span> destULx,<span style="color: rgb(30, 209, 53);"> Sint16</span> destULy, <span style="color: rgb(30, 209, 53);">Sint16</span> destDLx, <span style="color: rgb(30, 209, 53);">Sint16</span> destDLy,<span style="color: rgb(30, 209, 53);"> Sint16</span> destDRx,<span style="color: rgb(30, 209, 53);"> Sint16</span> destDRy, <span style="color: rgb(30, 209, 53);">Sint16</span> destURx,<span style="color: rgb(30, 209, 53);"> Sint16</span> destURy,<span style="font-weight: bold;"><br>
+</span><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">* </span>source, <span style="color: rgb(30, 209, 53);">Sint16</span> srcULx, <span style="color: rgb(30, 209, 53);">Sint16</span> srcULy,<span style="color: rgb(30, 209, 53);"> Sint16</span> srcDLx, <span style="color: rgb(30, 209, 53);">Sint16</span> srcDLy,<span style="color: rgb(30, 209, 53);"> Sint16</span> srcDRx,<span style="color: rgb(30, 209, 53);"> Sint16</span> srcDRy,<span style="color: rgb(30, 209, 53);"> Sint16</span> srcURx,<span style="color: rgb(30, 209, 53);"> Sint16</span> srcURy</td>
+</tr>
+<tr>
+<td>void</td>
+<td><span style="font-weight: bold;">SPG_QuadTexPoints</span></td>
+<td style="width: 517px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">* </span>dest,&nbsp;<span style="font-weight: bold; color: rgb(255, 102, 0);">SPG_Point</span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);">*</span> </span>dest_points,<span style="font-weight: bold;"><br>
+</span><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">* </span>source,&nbsp;<span style="font-weight: bold; color: rgb(255, 102, 0);">SPG_Point</span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);">*</span> </span>source_points</td>
+</tr>
+<tr>
+<td>void</td>
+<td><span style="font-weight: bold;">SPG_Polygon</span></td>
+<td style="width: 517px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">* </span>surface,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span> n, <span style="font-weight: bold; color: rgb(255, 102, 0);">SPG_Point</span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);">*</span> </span>points,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span> color</td>
+</tr>
+<tr>
+<td>void</td>
+<td><span style="font-weight: bold;">SPG_PolygonBlend</span></td>
+<td style="width: 517px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">* </span>surface,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>
+n,&nbsp;<span style="font-weight: bold; color: rgb(255, 102, 0);">SPG_Point</span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);">*</span> </span>points,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span> color</td>
+</tr>
+<tr>
+<td>void</td>
+<td><span style="font-weight: bold;">SPG_PolygonFilled</span></td>
+<td style="width: 517px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">* </span>surface,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>
+n,&nbsp;<span style="font-weight: bold; color: rgb(255, 102, 0);">SPG_Point</span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);">*</span> </span>points,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span> color</td>
+</tr>
+<tr>
+<td>void</td>
+<td><span style="font-weight: bold;">SPG_PolygonFilledBlend</span></td>
+<td style="width: 517px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">* </span>surface,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>
+n,&nbsp;<span style="font-weight: bold; color: rgb(255, 102, 0);">SPG_Point</span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);">*</span> </span>points,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32</span>
+color,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td>
+</tr>
+<tr>
+<td>void</td>
+<td><span style="font-weight: bold;">SPG_PolygonFade</span></td>
+<td style="width: 517px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">* </span>surface,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>
+n,&nbsp;<span style="font-weight: bold; color: rgb(255, 102, 0);">SPG_Point</span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);">*</span> </span>points,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32*</span> colors</td>
+</tr>
+<tr>
+<td>void</td>
+<td><span style="font-weight: bold;">SPG_PolygonFadeBlend</span></td>
+<td style="width: 517px;"><span style="color: rgb(0, 0, 153);"><span style="font-weight: bold;">SDL_Surface</span></span><span style="color: rgb(0, 0, 153);">* </span>surface,&nbsp;<span style="color: rgb(226, 94, 98);">Uint16</span>
+n,&nbsp;<span style="font-weight: bold; color: rgb(255, 102, 0);">SPG_Point</span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);">*</span> </span>points,&nbsp;<span style="color: rgb(153, 51, 153);">Uint32*</span>
+colors,&nbsp;<span style="color: rgb(0, 102, 0);">Uint8</span>
+alpha</td>
+</tr><tr><td><span style="color: rgb(255, 102, 0);"><span style="color: black;">void</span></span><span style="font-weight: bold; color: rgb(255, 102, 0);"><br></span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);"></span> </span></td><td><span style="font-weight: bold;">SPG_CopyPoints</span></td><td><span style="color: rgb(226, 94, 98);">Uint16</span>
+n,&nbsp;<span style="font-weight: bold; color: rgb(255, 102, 0);">SPG_Point</span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);">*</span> </span>points,&nbsp;<span style="font-weight: bold; color: rgb(255, 102, 0);">SPG_Point</span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);">*</span>&nbsp;</span>buffer</td></tr><tr><td>void</td><td><span style="font-weight: bold;">SPG_RotatePointsXY</span></td><td><span style="color: rgb(226, 94, 98);">Uint16</span>
+n,&nbsp;<span style="font-weight: bold; color: rgb(255, 102, 0);">SPG_Point</span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);">*</span> </span>points,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> cx,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> cy,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> angle<span style="color: rgb(153, 51, 153);"></span></td></tr><tr><td>void</td><td><span style="font-weight: bold;">SPG_RotatePoints</span></td><td><span style="color: rgb(226, 94, 98);">Uint16</span>
+n,&nbsp;<span style="font-weight: bold; color: rgb(255, 102, 0);">SPG_Point</span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);">*</span> </span>points,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> angle<span style="color: rgb(153, 51, 153);"></span></td></tr><tr><td>void</td><td><span style="font-weight: bold;">SPG_ScalePointsXY</span></td><td><span style="color: rgb(226, 94, 98);">Uint16</span>
+n,&nbsp;<span style="font-weight: bold; color: rgb(255, 102, 0);">SPG_Point</span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);">*</span> </span>points,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> cx,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> cy,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> xscale,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> yscale<span style="color: rgb(153, 51, 153);"></span></td></tr><tr><td>void</td><td><span style="font-weight: bold;">SPG_ScalePoints</span></td><td><span style="color: rgb(226, 94, 98);">Uint16</span>
+n,&nbsp;<span style="font-weight: bold; color: rgb(255, 102, 0);">SPG_Point</span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);">*</span> </span>points,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> xscale,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> yscale<span style="color: rgb(153, 51, 153);"></span></td></tr><tr><td>void</td><td><span style="font-weight: bold;">SPG_SkewPointsXY</span></td><td><span style="color: rgb(226, 94, 98);">Uint16</span>
+n,&nbsp;<span style="font-weight: bold; color: rgb(255, 102, 0);">SPG_Point</span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);">*</span> </span>points,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> cx,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> cy,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> xskew,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> yskew<span style="color: rgb(153, 51, 153);"></span></td></tr><tr><td>void</td><td><span style="font-weight: bold;">SPG_SkewPoints</span></td><td><span style="color: rgb(226, 94, 98);">Uint16</span>
+n,&nbsp;<span style="font-weight: bold; color: rgb(255, 102, 0);">SPG_Point</span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);">*</span> </span>points,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> xskew,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> yskew<span style="color: rgb(153, 51, 153);"></span></td></tr><tr><td>void</td><td><span style="font-weight: bold;">SPG_TranslatePoints</span></td><td><span style="color: rgb(226, 94, 98);">Uint16</span>
+n,&nbsp;<span style="font-weight: bold; color: rgb(255, 102, 0);">SPG_Point</span><span style="color: rgb(30, 209, 53);"><span style="color: rgb(255, 102, 0);">*</span> </span>points,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> x1,&nbsp;<span style="color: rgb(255, 102, 0);">float</span> y1<span style="color: rgb(153, 51, 153);"></span></td></tr>
+</tbody>
+</table>
+<br>
+<br>
+void SPG_Trigon(SDL_Surface* surface, Sint16 x1, Sint16 y1, Sint16 x2,
+Sint16 y2, Sint16 x3, Sint16 y3, Uint32 color)<br>
+- Draws a triangle<br>
+<br>
+void
+SPG_TrigonBlend(SDL_Surface* surface, Sint16 x1, Sint16 y1, Sint16 x2,
+Sint16 y2, Sint16 x3, Sint16 y3, Uint32 color, Uint8 alpha)<br>
+- Draws an alpha-blended triangle<br>
+<br>
+void SPG_TrigonFilled(SDL_Surface* surface, Sint16 x1, Sint16 y1,
+Sint16 x2, Sint16 y2, Sint16 x3, Sint16 y3, Uint32 color)<br>
+- Draws a filled triangle<br>
+<br>
+void
+SPG_TrigonFilledBlend(SDL_Surface* surface, Sint16 x1, Sint16 y1,
+Sint16
+x2, Sint16 y2, Sint16 x3, Sint16 y3, Uint32 color, Uint8 alpha)<br>
+- Draws a filled alpha-blended triangle<br>
+<br>
+void
+SPG_TrigonFade(SDL_Surface* surface, Sint16 x1, Sint16 y1, Sint16
+x2, Sint16 y2, Sint16 x3, Sint16 y3, Uint32 color1, Uint32 color2,
+Uint32
+color3)<br>
+- Draws a filled trangle with interpolated shading from three vertex
+colors<br>
+<br>
+void
+SPG_TrigonTex(SDL_Surface* surface, Sint16 x1, Sint16 y1, Sint16 x2,
+Sint16
+y2, Sint16 x3, Sint16 y3, SDL_Surface* source, Sint16 sx1, Sint16 sy1,
+Sint16
+sx2, Sint16 sy2, Sint16 sx3, Sint16 sy3)<br>
+- Draws a surface-mapped (textured) triangle. &nbsp;The points should be listed in counter-clockwise order.<br>
+<br>
+void
+SPG_TrigonTexPoints(SDL_Surface* dest, SPG_Point* dest_points, SDL_Surface* source,&nbsp;SPG_Point* source_points)<br>
+- Draws a surface-mapped (textured) triangle. &nbsp;The points should be listed in counter-clockwise order.<br>
+<br>
+void
+SPG_QuadTex(SDL_Surface* dest, Sint16 x1, Sint16 y1, Sint16 x2,
+Sint16
+y2, Sint16 x3, Sint16 y3, Sint16 x4, Sint16 y4, SDL_Surface* source,
+Sint16
+sx1, Sint16 sy1, Sint16 sx2, Sint16 sy2, Sint16 sx3, Sint16 sy3, Sint16
+sx4, Sint16 sy4)<br>
+- Draws a surface-mapped (textured) quadrilateral. &nbsp;The points should be listed in counter-clockwise order.<br>
+<br>
+void
+SPG_QuadTexPoints(SDL_Surface* dest, SPG_Point* dest_points, SDL_Surface* source,&nbsp;SPG_Point* source_points)<br>
+- Draws a surface-mapped (textured) quadrilateral. &nbsp;The points should be listed in counter-clockwise order.<br>
+<br>
+void SPG_Polygon(SDL_Surface* surface, Uint16 n, SPG_Point* points,
+Uint32 color)<br>
+- Draws a polygon with 'n' vertices<br>
+<br>
+void SPG_PolygonBlend(SDL_Surface* surface, Uint16 n,&nbsp;SPG_Point* points, Uint32 color)<br>
+- Draws an alpha-blended polygon with 'n' vertices<br>
+<br>
+void SPG_PolygonFilled(SDL_Surface* surface, Uint16 n,&nbsp;SPG_Point* points, Uint32 color)<br>
+- Draws a filled polygon with 'n' vertices<br>
+<br>
+void SPG_PolygonFilledBlend(SDL_Surface* surface, Uint16 n,&nbsp;SPG_Point* points, Uint32 color, Uint8 alpha)<br>
+- Draws a filled alpha-blended polygon with 'n' vertices<br>
+<br>
+void SPG_PolygonFade(SDL_Surface* surface, Uint16 n,&nbsp;SPG_Point* points, Uint32* colors)<br>
+- Draws a filled polygon with interpolated shading from 'n' vertex
+colors<br>
+<br>
+void SPG_PolygonFadeBlend(SDL_Surface* surface, Uint16 n,&nbsp;SPG_Point* points, Uint32* colors, Uint8 alpha)<br>
+- Draws a filled alpha-blended polygon with interpolated shading from
+'n' vertex colors<br><br>void SPG_CopyPoints(Uint16 n, SPG_Point* points, SPG_Point* buffer);<br>- Copies the given points into the given buffer. &nbsp;This avoids the overhead in SPG_CopyPoints of dynamic memory allocation.<br><br>void SPG_RotatePointsXY(Uint16 n, SPG_Point* points, float cx, float cy, float angle);<br>- Rotates the given points around the point (cx, cy).<br><br>void SPG_RotatePoints(Uint16 n, SPG_Point* points, float angle);<br>- Rotates the given points around the point (0, 0).<br><br>void SPG_ScalePointsXY(Uint16 n, SPG_Point* points, float cx, float cy, float xscale, float yscale);<br>- Scales the given points around the point (cx, cy).<br><br>void SPG_ScalePoints(Uint16 n, SPG_Point* points, float cx, float cy, float xscale, float yscale);<br>- Scales the given points around the point (0, 0).<br><br>void SPG_SkewPointsXY(Uint16 n, SPG_Point* points, float cx, float cy, float xskew, float yskew);<br>- Skews the given points around the point (cx, cy).<br><br>void SPG_SkewPoints(Uint16 n, SPG_Point* points, float cx, float cy, float xskew, float yskew);<br>- Skews the given points around the point (0, 0).<br><br>void SPG_TranslatePoints(Uint16 n, SPG_Point* points, float x1, float y1);<br>
+- Moves each given point by (x1, y1).<br><br>
+<br><br>
+<br>
+Notes:<br>
+These functions respect the destination surface's clipping rect. (see
+SPG_ClipRect)<br>
+The surface will be automatically locked when necessary. (see SPG_Lock)<br>
+You can control the alpha blending mode. (see SPG_PushBlend)<br>
+Anti-aliasing capability (see SPG_PushAA)<br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+SPriG v1.0.0 Documentation by Jonathan Dearborn 2008
+</body></html>

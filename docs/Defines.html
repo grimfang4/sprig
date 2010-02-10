@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><!-- saved from url=(0031)http://pubpages.unh.edu/~jmb97/ -->
+
+
+<title>Defines - SPriG</title><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta content="MSHTML 6.00.2900.3157" name="GENERATOR"></head>
+<body>
+<tc></tc>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: center; height: 33px; background-color: rgb(51, 51, 255);" colspan="2"><big style="font-weight: bold; color: white;"><big>Defines</big></big></td>
+</tr>
+<tr>
+<td style="vertical-align: top; width: 100px; background-color: rgb(91, 128, 255);">
+<a style="font-weight: bold; color: white;" href="Primitives.html">Primitives</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Polygon.html">Polygon</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Transform.html">Transform</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Surface.html">Surface</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Drawing.html">Drawing</a><br><a style="font-weight: bold; color: white;" href="Dirty%20Rects.html">Dirty Rect</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Palette.html">Palette</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Control.html">Control</a><a style="font-weight: bold; color: white;" href="States.html"></a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Misc.html">Misc</a><br style="font-weight: bold; color: white;">
+<span style="font-weight: bold; color: black;">Defines</span><br><a style="color: white; font-weight: bold;" href="Types.html">Types</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Extended.html">Extended</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Arguments.html">Arguments</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="index.html">Index</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Credits.html">Credits</a><br>
+</td>
+<td style="width: 838px; vertical-align: top; height: 600px;"><br>
+<table style="text-align: left; margin-left: 30px; height: 1601px; width: 961px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+
+<td style="width: 258px;">Name</td>
+<td style="width: 642px;">Description</td>
+</tr>
+<tr><td style="width: 258px;">SPG_VER</td><td style="width: 642px;">The major API version number. &nbsp;If this
+number changes between releases, it means that there was a
+compatibility break. &nbsp;You will have to understand what changed to
+ensure that your program works correctly.</td></tr><tr><td style="width: 258px;">SPG_VER_MINOR</td><td style="width: 642px;">The minor API version number. &nbsp;If this number changes between releases, it means that new functionality has been added.</td></tr><tr><td style="width: 258px;">SPG_VER_BUGFIX</td><td style="width: 642px;">The
+bugfix API version number. &nbsp;This number changes upon every Sprig
+release, meaning that internal functionality has changed, usually by
+fixing bugs or implementing placeholder functions.</td></tr><tr><td style="width: 258px;">SPG_C_AND_CPP</td><td style="width: 642px;">If this is defined, Sprig will be built according to the compiler being used, differentiating whether it is C or C++.</td></tr><tr><td style="width: 258px;">SPG_C_ONLY</td><td style="width: 642px;">This
+is defined automatically when SPG_C_AND_CPP is either not defined or
+defined on a C compiler. &nbsp;It makes sure that no special C++
+functionality is used.</td></tr><tr><td style="width: 258px;">SPG_CPP</td><td style="width: 642px;">This
+is defined automatically when SPG_C_AND_CPP is defined on a C++
+compiler. &nbsp;It allows inlined functions to exploit some advantages
+of C++ syntax and makes sure that exported functions are properly
+protected from C++ name mangling.</td></tr><tr><td style="width: 258px;">SPG_USE_EXTENDED</td><td style="width: 642px;">If this is defined,&nbsp;extra functions will be exported.</td></tr><tr><td style="width: 258px;">SPG_MAX_ERRORS</td><td style="width: 642px;">This
+defines the maximum size of internal stacks. &nbsp;When Sprig is
+compiled, this determines how many items you can 'push' to the stack.</td></tr><tr><td style="width: 258px;">SPG_DEFINE_PI</td><td style="width: 642px;">If
+this is defined, several variations of the mathematical constant, pi,
+will be defined:&nbsp;PI_8, PI_4, PI_2, PI3_4, PI, PI5_4, PI3_2, PI7_4,
+PI2</td></tr><tr><td style="width: 258px;">PI_8, PI_4, PI_2, PI3_4, PI, PI5_4, PI3_2, PI7_4, PI2</td><td style="width: 642px;">Several
+constants representing numerical factors of pi. &nbsp;PI followed by a
+number is multiplied by that number, as in PI2, which equals 2*PI.
+&nbsp;A number preceded by an underscore is the denominator of a
+fraction, as in PI3_4, which equals 3*PI/4.</td></tr><tr><td style="width: 258px;">DEGPERRAD, RADPERDEG</td><td style="width: 642px;">Conversion
+factors for changing between degrees and radians. &nbsp;Multiply by
+DEGPERRAD to convert to degrees. &nbsp;Multiply by RADPERDEG to convert
+to radians.</td></tr><tr><td>SPG_USE_FAST_MATH</td><td>Tells
+Sprig transform functions to use a faster set of math functions.
+&nbsp;If you experience severe problems with SPG_Rotate, SPG_Scale, or
+SPG_Transform, then try building Sprig without this being defined.</td></tr><tr><td style="width: 258px;">SPG_FLAG0 - SPG_FLAG8</td><td style="width: 642px;">These flags
+are used through other flags for passing flag arguments to functions.
+&nbsp;For example, SPG_Transform() takes a flags argument. &nbsp;Use SPG_TAA
+to enable anti-aliasing, SPG_TSAFE to ensure correct colors, etc.
+&nbsp;For some functions, these flags can be combined using a bitwise
+OR '|'.</td></tr><tr><td style="width: 258px;">SDL_ALPHA_OPAQUE, SDL_ALPHA_TRANSPARENT, SDL_VERSIONNUM, SDL_CreateRGBSurface, </td><td style="width: 642px;">These are defines for some functionality that is missing in older versions of SDL.</td></tr><tr><td style="width: 258px;">SPG_CLIP_XMIN, SPG_CLIP_XMAX, SPG_CLIP_YMIN, SPG_CLIP_YMAX</td><td style="width: 642px;">These defines are used for testing x and y coordinates to make sure they appear within a surface's clipping rect.</td></tr><tr><td style="width: 258px;">SPG_MapRGBA, SPG_GetRGBA</td><td style="width: 642px;">These are defines for SDL_MapRGBA and SDL_GetRGBA because they are not defined the same way on old vesions of SDL.</td></tr><tr><td style="width: 258px;">DECLSPEC</td><td style="width: 642px;">When building Sprig, this define is used to abstract the different ways that different compilers export functions.</td></tr><tr><td style="width: 258px;">SPG_bool</td><td style="width: 642px;">This
+is a define that makes the SPG_bool type identical to Uint8.
+&nbsp;Booleans in C++ &nbsp;(and any other language) are 8 bits in
+memory for architecture reasons, despite the fact that they hold only 1
+bit of information.</td></tr><tr><td style="width: 258px;">SPG_DEST_ALPHA,
+SPG_SRC_ALPHA, SPG_COMBINE_ALPHA, SPG_COPY_NO_ALPHA,
+SPG_COPY_SRC_ALPHA, SPG_COPY_DEST_ALPHA, SPG_COPY_COMBINE_ALPHA,
+SPG_COPY_ALPHA_ONLY, SPG_COMBINE_ALPHA_ONLY, SPG_REPLACE_COLORKEY,
+SPG_SRC_MASK,SPG_DEST_MASK </td><td style="width: 642px;">These are
+the alpha-blending modes available through the graphics primitives and
+SPG_Blit(). &nbsp;See SPG_Blit() for more information.</td></tr><tr><td style="width: 258px;"><br><br><br><br>SPG_NONE<br>SPG_TAA<br>SPG_TSAFE<br>SPG_TTMAP<br>SPG_TCOLORKEY<br>SPG_TSLOW<br>SPG_TBLEND<br>SPG_TSURFACE_ALPHA<br><br><br></td><td style="width: 642px;">These
+are the transformation flags, which can be passed to SPG_Transform()
+and SPG_TransformSurface(). &nbsp;See SPG_Transform() for more
+information.</td></tr>
+
+
+
+
+
+
+</tbody>
+</table>
+<br>
+<br><br>
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+SPriG v1.0.0 Documentation by Jonathan Dearborn 2008
+</body></html>

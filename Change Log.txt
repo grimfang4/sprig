@@ -1,3 +1,9 @@
+11-27-09 v1.0.1
+Applied fix for SPG_PopThickness.  Thanks to Laurent Desnogues!
+
+8-22-09
+Added SPG_LinkedVersion and SPG_Probe for checking the compiled options.
+
 11-8-08 v1.0.0
 Changed SPG_Fader and SPG_AlphaFader to SPG_FadedPalette32 and SPG_FadedPalette32Alpha and to use Uint32 instead of RGB.  Changed SPG_SetupRainbowPalette to SPG_RainbowPalette32 and SPG_SetupBWPalette to SPG_GrayPalette32.  Replaced SPG_CopyPoints with SPG_BufferPoints.  They duplicate functionality and I should encourage buffering rather than dynamic stuff.  Added SPG_USE_FAST_MATH (used in SPG_rotation.c).  Updated docs.
 

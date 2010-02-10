@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><!-- saved from url=(0031)http://pubpages.unh.edu/~jmb97/ -->
+
+
+<title>Arguments - SPriG</title><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta content="MSHTML 6.00.2900.3157" name="GENERATOR"></head>
+<body>
+<tc></tc>
+<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="text-align: center; height: 33px; background-color: rgb(51, 51, 255); width: 1076px;" colspan="2"><big style="font-weight: bold; color: white;"><big>Function Arguments Reference</big></big></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: rgb(91, 128, 255); width: 105px;">
+<a style="font-weight: bold; color: white;" href="Primitives.html">Primitives</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Polygon.html">Polygon</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Transform.html">Transform</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Surface.html">Surface</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Drawing.html">Drawing</a><br><a style="font-weight: bold; color: white;" href="Dirty%20Rects.html">Dirty Rect</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Palette.html">Palette</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Control.html">Control</a><a style="font-weight: bold; color: white;" href="States.html"></a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Misc.html">Misc</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Defines.html">Defines</a><br><a style="color: white; font-weight: bold;" href="Types.html">Types</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Extended.html">Extended</a><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<span style="font-weight: bold; color: black;">Arguments</span><br style="font-weight: bold; color: white;">
+<br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="index.html">Index</a><br style="font-weight: bold; color: white;">
+<a style="font-weight: bold; color: white;" href="Credits.html">Credits</a><br>
+</td>
+<td style="vertical-align: top; height: 600px; width: 1076px;"><br>SDL_Surface* surface<br>&nbsp;- Surface where things are happening<br><br>SDL_Surface* source<br>&nbsp;- Surface where the data comes from<br><br>SDL_Surface* dest<br>&nbsp;- Surface where the data goes<br><br>Uint32 color<br>&nbsp;-
+32-bit color value.&nbsp; Values range from 0x00000000 to
+0xFFFFFFFF.&nbsp; Each pair of digits in the hexidecimal expression
+represents a color channel (e.g. 'red' or 'alpha').&nbsp; See Uint8
+entries.<br><br>Uint8 R, Uint8 G, Uint8 B, Uint8 A<br>&nbsp;- 8-bit color value.&nbsp; Values range from 0x00 (0) to 0xFF (255).&nbsp; Alpha here is a measure of opacity.<br><br>SPG_bool enable<br>&nbsp;- Pass either a 1 (true) to enable or 0 (false) to disable.<br><br>Uint8 state<br>&nbsp;- Alpha-blending state.&nbsp; One of:<br>&nbsp;&nbsp; SPG_DEST_ALPHA<br>&nbsp;&nbsp; SPG_SRC_ALPHA<br>&nbsp;&nbsp; SPG_COMBINE_ALPHA<br>&nbsp;&nbsp; SPG_COPY_NO_ALPHA<br>&nbsp;&nbsp; SPG_COPY_SRC_ALPHA, SPG_SRC_MASK<br>&nbsp;&nbsp; SPG_COPY_DEST_ALPHA, SPG_DEST_MASK<br>&nbsp;&nbsp; SPG_COPY_COMBINE_ALPHA<br>&nbsp;&nbsp; SPG_COPY_ALPHA_ONLY<br>&nbsp;&nbsp; SPG_COMBINE_ALPHA_ONLY<br><br>const char* err<br>&nbsp;- Error message to be received by SPG_GetError().<br><br>Sint16 x, Sint16 y<br>&nbsp;-
+2D coordinate integers.&nbsp; These can be positive or negative and are
+measured from the top-left corner of the window (client area).<br><br>SDL_Rect rect<br>&nbsp;- A struct with the fields:<br>&nbsp;&nbsp; Sint16 x, y<br>&nbsp;&nbsp; Uint16 w, h<br>&nbsp;&nbsp;
+The x and y coordinates usually dictate the positioning within a given
+surface.&nbsp; The w and h are the width and height of the rectangular
+area.<br><br>Uint32 *ctab<br>&nbsp;- Array of Uint32 color values that makes up a palette table.<br><br>void (*blitfn)(SDL_Surface*, SDL_Rect*, SDL_Surface*, SDL_Rect*)<br>&nbsp;- User-defined function (pointer) to be used by SPG_Blit().<br><br>Uint32 flags<br>&nbsp;- A combination of the flags used by SDL_CreateRGBSurface.<br><br>Uint8 flags<br>&nbsp;- Transformation flags, one of the following:<br>&nbsp; &nbsp;SPG_NONE<br>&nbsp; &nbsp;SPG_TAA<br>&nbsp; &nbsp;SPG_TSAFE<br>&nbsp; &nbsp;SPG_TTMAP<br>&nbsp; &nbsp;SPG_TCOLORKEY<br><br>SDL_PixelFormat* format<br>&nbsp;-
+The format of the pixels. &nbsp;One such format is 32-bit ARGB, where
+each color channel gets 8 bits (1 byte) in that order.<br><br>void* linearArray<br>&nbsp;- An array of pixel data (4x Uint8) in the format of the surface that you are creating with SPG_CreateAlphaSurfaceFrom.<br><br>float angle<br>&nbsp;- The angle, in degrees, measured from the positive x-axis (horizontal line pointing right) going clockwise.<br><br>float xscale, yscale<br>&nbsp;-
+The multiplier to use to create the scaled surface. &nbsp;A scale of
+0.5 will give a surface with half the original surface's dimensions
+(zoom out). &nbsp;A scale of 2 will give a surface with double the
+original surface's dimensions (zoom in).<br><br>Uint8 *block<br>&nbsp;- Horizontal scanline<br><br>Uint16 *block<br>&nbsp;- Horizontal scanline<br><br>Uint32 *block<br>&nbsp;- Horizontal scanline<br><br>SPG_bool* pattern<br>&nbsp;- An array of ones and zeros that determine where a pixel will be drawn in the SDL_Rect given to SPG_PixelPattern.<br><br>Uint32* colors<br>&nbsp;- Array of 32-bit colors.<br><br>Uint8* pixelAlpha<br>&nbsp;- Array of 8-bit alpha values.<br><br>void Callback(SDL_Surface *Surf, Sint16 X, Sint16 Y, Uint32 Color)<br>&nbsp;- A user-defined function to be called for every pixel considered by the primitive function.<br><br>float r<br>&nbsp;-
+The radius of the circle. &nbsp;Radii with&nbsp;zero tenths (e.g. 4.0)
+will result in an odd diameter, while radii with five tenths (e.g. 4.5)
+will result in an even diameter.<br><br>float rx, float ry<br>&nbsp;- The radius of a particular axis of an ellipse.<br><br>Uint16 n<br>&nbsp;- Number of points in the polygon.&nbsp; This is used to access the coordinate arrays.<br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+SPriG v1.0.0 Documentation by Jonathan Dearborn 2008
+</body></html>
