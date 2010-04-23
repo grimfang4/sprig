@@ -2696,11 +2696,21 @@ void SPG_RectRound(SDL_Surface *Surface, Sint16 x1, Sint16 y1, Sint16 x2, Sint16
     SPG_LineH(Surface,minX,y2,maxX,color);
     SPG_LineV(Surface,x1,minY,maxY,color);
     SPG_LineV(Surface,x2,minY,maxY,color);
-
-    SPG_Arc(Surface, minX, minY, r, 180, 270, color);
-    SPG_Arc(Surface, maxX, minY, r, 270, 360, color);
-    SPG_Arc(Surface, maxX, maxY, r, 0, 90, color);
-    SPG_Arc(Surface, minX, maxY, r, 90, 180, color);
+	
+	if(spg_usedegrees)
+	{
+		SPG_Arc(Surface, minX, minY, r, 180, 270, color);
+		SPG_Arc(Surface, maxX, minY, r, 270, 360, color);
+		SPG_Arc(Surface, maxX, maxY, r, 0, 90, color);
+		SPG_Arc(Surface, minX, maxY, r, 90, 180, color);
+	}
+	else
+	{
+		SPG_Arc(Surface, minX, minY, r, PI, PI3_2, color);
+		SPG_Arc(Surface, maxX, minY, r, PI3_2, PI2, color);
+		SPG_Arc(Surface, maxX, maxY, r, 0, PI_2, color);
+		SPG_Arc(Surface, minX, maxY, r, PI_2, PI, color);
+	}
     /*if(spg_makedirtyrects)
     {
         SDL_Rect rect;
@@ -2736,10 +2746,20 @@ void SPG_RectRoundBlend(SDL_Surface *Surface, Sint16 x1, Sint16 y1, Sint16 x2, S
     SPG_LineHBlend(Surface,minX,y2,maxX,color,alpha);
     SPG_LineVBlend(Surface,x1,minY,maxY,color,alpha);
     SPG_LineVBlend(Surface,x2,minY,maxY,color,alpha);
-    SPG_ArcBlend(Surface, minX, minY, r, 180, 270, color, alpha);
-    SPG_ArcBlend(Surface, maxX, minY, r, 270, 360, color, alpha);
-    SPG_ArcBlend(Surface, maxX, maxY, r, 0, 90, color, alpha);
-    SPG_ArcBlend(Surface, minX, maxY, r, 90, 180, color, alpha);
+	if(spg_usedegrees)
+	{
+		SPG_ArcBlend(Surface, minX, minY, r, 180, 270, color, alpha);
+		SPG_ArcBlend(Surface, maxX, minY, r, 270, 360, color, alpha);
+		SPG_ArcBlend(Surface, maxX, maxY, r, 0, 90, color, alpha);
+		SPG_ArcBlend(Surface, minX, maxY, r, 90, 180, color, alpha);
+	}
+	else
+	{
+		SPG_ArcBlend(Surface, minX, minY, r, PI, PI3_2, color, alpha);
+		SPG_ArcBlend(Surface, maxX, minY, r, PI3_2, PI2, color, alpha);
+		SPG_ArcBlend(Surface, maxX, maxY, r, 0, PI_2, color, alpha);
+		SPG_ArcBlend(Surface, minX, maxY, r, PI_2, PI, color, alpha);
+	}
 
 
     spg_unlock(Surface);
@@ -2900,14 +2920,25 @@ void SPG_RectRoundFilledBlend(SDL_Surface *Surface, Sint16 x1, Sint16 y1, Sint16
     SPG_RectFilledBlend(Surface,area.x, area.y, area.x+area.w, area.y+area.h, color,alpha);
 
 
-    // UL
-    SPG_ArcFilledBlend(Surface, minX-1, minY-1, r, 180, 270, color, alpha);
-    // UR
-    SPG_ArcFilledBlend(Surface, maxX+1, minY-1, r, 270, 360, color, alpha);
-    // DR
-    SPG_ArcFilledBlend(Surface, maxX+1, maxY+1, r, 0, 90, color, alpha);
-    // DL
-    SPG_ArcFilledBlend(Surface, minX-1, maxY+1, r, 90, 180, color, alpha);
+	if(spg_usedegrees)
+	{
+		// UL
+		SPG_ArcFilledBlend(Surface, minX-1, minY-1, r, 180, 270, color, alpha);
+		// UR
+		SPG_ArcFilledBlend(Surface, maxX+1, minY-1, r, 270, 360, color, alpha);
+		// DR
+		SPG_ArcFilledBlend(Surface, maxX+1, maxY+1, r, 0, 90, color, alpha);
+		// DL
+		SPG_ArcFilledBlend(Surface, minX-1, maxY+1, r, 90, 180, color, alpha);
+	}
+	else
+	{
+		SPG_ArcFilledBlend(Surface, minX-1, minY-1, r, PI, PI3_2, color, alpha);
+		SPG_ArcFilledBlend(Surface, maxX+1, minY-1, r, PI3_2, PI2, color, alpha);
+		SPG_ArcFilledBlend(Surface, maxX+1, maxY+1, r, 0, PI_2, color, alpha);
+		SPG_ArcFilledBlend(Surface, minX-1, maxY+1, r, PI_2, PI, color, alpha);
+	}
+	
     if(spg_makedirtyrects)
     {
         SDL_Rect rect;
