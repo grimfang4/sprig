@@ -113,8 +113,8 @@ Uint16 SPG_PopThickness(void)
         return 1;
     }
     struct spg_uint16_node* temp = spg_thickness_state;
-    spg_thickness = spg_thickness_state->datum;
     spg_thickness_state = spg_thickness_state->next;
+    spg_thickness = spg_thickness_state->datum;
     free(temp);
     return spg_thickness;
 }
