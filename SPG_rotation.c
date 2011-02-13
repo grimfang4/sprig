@@ -148,7 +148,7 @@ void spg_calcrect(SDL_Surface *src, SDL_Surface *dst, float theta, float xscale,
 	UintXX *dst_row; \
 	Uint32 col;\
 \
-	for (y=ymin; y<=ymax; y++){ /* Changed from y<ymax to y<=ymax Edge fix 7-13-08*/\
+	for (y=ymin; y<ymax; y++){ \
 		dy = y - qy; \
 \
 		sx = (Sint32)(ctdx  + stx*dy + mx);  /* Compute source anchor points */ \
@@ -157,11 +157,11 @@ void spg_calcrect(SDL_Surface *src, SDL_Surface *dst, float theta, float xscale,
 		/* Calculate pointer to dst surface */ \
 		dst_row = (UintXX *)dst->pixels + y*dst_pitch; \
 \
-		for (x=xmin; x<=xmax; x++){ /* Changed from x<xmax to x<=xmax Edge fix 7-13-08*/\
+		for (x=xmin; x<xmax; x++){ \
 			rx=(Sint16)(sx >> 13);  /* Convert from fixed-point */ \
-			ry=(Sint16)(sy >> 13)+1; /* Added +1 Edge fix 7-13-08*/\
+			ry=(Sint16)(sy >> 13); \
             /* Make sure the source pixel is actually in the source image. */ \
-			if( (rx>=sxmin) && (rx<=sxmax+1) && (ry>=symin) && (ry<=symax) ) /* Changed from (rx<=sxmax) to (rx<=sxmax+1) Edge fix 7-13-08*/\
+			if( (rx>=sxmin) && (rx<=sxmax) && (ry>=symin) && (ry<=symax) ) \
 			{\
                 col = *(src_row+ry*src_pitch+rx);\
                  if(!(flags & SPG_TCOLORKEY && src->flags & SDL_SRCCOLORKEY && col == src->format->colorkey))\
@@ -176,18 +176,18 @@ void spg_calcrect(SDL_Surface *src, SDL_Surface *dst, float theta, float xscale,
 #define TRANSFORM_GENERIC \
 	Uint8 R, G, B, A; \
 \
-	for (y=ymin; y<=ymax; y++){ /* Changed from y<ymax to y<=ymax Edge fix 7-13-08*/\
+	for (y=ymin; y<ymax; y++){ \
 		dy = y - qy; \
 \
 		sx = (Sint32)(ctdx  + stx*dy + mx);  /* Compute source anchor points */ \
 		sy = (Sint32)(cty*dy - stdx  + my); \
 \
-		for (x=xmin; x<=xmax; x++){ /* Changed from x<xmax to x<=xmax Edge fix 7-13-08*/\
+		for (x=xmin; x<xmax; x++){ \
 			rx=(Sint16)(sx >> 13);  /* Convert from fixed-point */ \
-			ry=(Sint16)(sy >> 13)+1; /* Added +1 Edge fix 7-13-08*/\
+			ry=(Sint16)(sy >> 13); \
 \
 			/* Make sure the source pixel is actually in the source image. */ \
-			if( (rx>=sxmin) && (rx<=sxmax+1) && (ry>=symin) && (ry<=symax) ){ /* Changed from (rx<=sxmax) to (rx<=sxmax+1) Edge fix 7-13-08*/\
+			if( (rx>=sxmin) && (rx<=sxmax) && (ry>=symin) && (ry<=symax) ){ \
 				SPG_GetRGBA(SPG_GetPixel(src,rx,ry), src->format, &R, &G, &B, &A);\
 				if(!(flags & SPG_TCOLORKEY && src->flags & SDL_SRCCOLORKEY && SDL_MapRGB(src->format, R, G, B) == src->format->colorkey))\
                     spg_pixelX(dst,x,y,SPG_MapRGBA(dst->format, R, G, B, A)); \
@@ -553,7 +553,6 @@ SDL_Rect SPG_transformAA(SDL_Surface *src, SDL_Surface *dst, float angle, float 
 
 SDL_Rect SPG_TransformX(SDL_Surface *src, SDL_Surface *dst, float angle, float xscale, float yscale, Uint16 pivotX, Uint16 pivotY, Uint16 destX, Uint16 destY, Uint8 flags)
 {
-    destY++; // Hacky fix for missing edges 7/13/08
     SDL_Rect rect;
 
 	if(flags & SPG_TTMAP)
