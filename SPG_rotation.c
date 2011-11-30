@@ -50,7 +50,18 @@ extern SPG_DirtyTable* spg_dirtytable_front;
 void spg_pixelX(SDL_Surface *dest,Sint16 x,Sint16 y,Uint32 color);
 SDL_Rect spg_transform_tmap(SDL_Surface *src, SDL_Surface *dst, float angle, float xscale, float yscale, Uint16 qx, Uint16 qy);
 
+// Transformation fixed-point constants
+// Originally, it used 18.13 fixed point.  Now, it uses 21.10 to allow scaling larger images to points.
+#define FIXED_DECIMAL_PLACES 10
+#define FIXED_MAX_DECIMAL 1024.0f  // 2^10
+#define FIXED_MAX_DECIMAL_HACK 1024.2f
+#define FIXED_MAX_INT 2097152 // 2^(31-10)
+#define FIXED_RATIO 0.00048828125f  // FIXED_MAX_DECIMAL/FIXED_MAX_INT
 
+//#define FIXED_DECIMAL_PLACES 13
+//#define FIXED_MAX_DECIMAL 8192.0f  // 2^13
+//#define FIXED_MAX_DECIMAL_HACK 8192.2f
+//#define FIXED_MAX_INT 262144 // 2^(31-13)
 
 
 
@@ -72,18 +83,18 @@ void spg_calcrect(SDL_Surface *src, SDL_Surface *dst, float theta, float xscale,
 
 	// We don't really need fixed-point here
 	// but why not?
-	Sint32 const istx = (Sint32)((sin(theta)*xscale) * 8192.0);  /* Inverse transform */
-	Sint32 const ictx = (Sint32)((cos(theta)*xscale) * 8192.2);
-	Sint32 const isty = (Sint32)((sin(theta)*yscale) * 8192.0);
-	Sint32 const icty = (Sint32)((cos(theta)*yscale) * 8192.2);
+	Sint32 const istx = (Sint32)((sin(theta)*xscale) * FIXED_MAX_DECIMAL);  /* Inverse transform */
+	Sint32 const ictx = (Sint32)((cos(theta)*xscale) * FIXED_MAX_DECIMAL_HACK);
+	Sint32 const isty = (Sint32)((sin(theta)*yscale) * FIXED_MAX_DECIMAL);
+	Sint32 const icty = (Sint32)((cos(theta)*yscale) * FIXED_MAX_DECIMAL_HACK);
     int i;
 	//Calculate the four corner points
 	for(i=0; i<4; i++){
 		rx = sx[i] - px;
 		ry = sy[i] - py;
 
-		x = (Sint16)(((ictx*rx - isty*ry) >> 13) + qx);
-		y = (Sint16)(((icty*ry + istx*rx) >> 13) + qy);
+		x = (Sint16)(((ictx*rx - isty*ry) >> FIXED_DECIMAL_PLACES) + qx);
+		y = (Sint16)(((icty*ry + istx*rx) >> FIXED_DECIMAL_PLACES) + qy);
 
 
 		if(i==0){
@@ -158,8 +169,8 @@ void spg_calcrect(SDL_Surface *src, SDL_Surface *dst, float theta, float xscale,
 		dst_row = (UintXX *)dst->pixels + y*dst_pitch; \
 \
 		for (x=xmin; x<xmax; x++){ \
-			rx=(Sint16)(sx >> 13);  /* Convert from fixed-point */ \
-			ry=(Sint16)(sy >> 13); \
+			rx=(Sint16)(sx >> FIXED_DECIMAL_PLACES);  /* Convert from fixed-point */ \
+			ry=(Sint16)(sy >> FIXED_DECIMAL_PLACES); \
             /* Make sure the source pixel is actually in the source image. */ \
 			if( (rx>=sxmin) && (rx<=sxmax) && (ry>=symin) && (ry<=symax) ) \
 			{\
@@ -183,8 +194,8 @@ void spg_calcrect(SDL_Surface *src, SDL_Surface *dst, float theta, float xscale,
 		sy = (Sint32)(cty*dy - stdx  + my); \
 \
 		for (x=xmin; x<xmax; x++){ \
-			rx=(Sint16)(sx >> 13);  /* Convert from fixed-point */ \
-			ry=(Sint16)(sy >> 13); \
+			rx=(Sint16)(sx >> FIXED_DECIMAL_PLACES);  /* Convert from fixed-point */ \
+			ry=(Sint16)(sy >> FIXED_DECIMAL_PLACES); \
 \
 			/* Make sure the source pixel is actually in the source image. */ \
 			if( (rx>=sxmin) && (rx<=sxmax) && (ry>=symin) && (ry<=symax) ){ \
@@ -254,8 +265,8 @@ void spg_calcrect(SDL_Surface *src, SDL_Surface *dst, float theta, float xscale,
 		dst_row = (UintXX *)dst->pixels + y*dst_pitch; \
 \
 		for (x=xmin; x<xmax; x++){ \
-			rx=(Sint16)(sx >> 13);  /* Convert from fixed-point */ \
-			ry=(Sint16)(sy >> 13); \
+			rx=(Sint16)(sx >> FIXED_DECIMAL_PLACES);  /* Convert from fixed-point */ \
+			ry=(Sint16)(sy >> FIXED_DECIMAL_PLACES); \
 \
 			/* Make sure the source pixel is actually in the source image. */ \
 			if((rx>=sxmin) && (rx+1<=sxmax) && (ry>=symin) && (ry+1<=symax) && !((flags & SPG_TCOLORKEY) && (src->flags & SDL_SRCCOLORKEY) && *(src_row+ry*src_pitch+rx) == src->format->colorkey) ){ \
@@ -300,8 +311,8 @@ void spg_calcrect(SDL_Surface *src, SDL_Surface *dst, float theta, float xscale,
 		sy = (Sint32)(cty*dy - stdx  + my); \
 \
 		for (x=xmin; x<xmax; x++){ \
-			rx=(Sint16)(sx >> 13);  /* Convert from fixed-point */ \
-			ry=(Sint16)(sy >> 13); \
+			rx=(Sint16)(sx >> FIXED_DECIMAL_PLACES);  /* Convert from fixed-point */ \
+			ry=(Sint16)(sy >> FIXED_DECIMAL_PLACES); \
 \
 			/* Make sure the source pixel is actually in the source image. */ \
 			if( (rx>=sxmin) && (rx+1<=sxmax) && (ry>=symin) && (ry+1<=symax)){ \
@@ -319,10 +330,10 @@ void spg_calcrect(SDL_Surface *src, SDL_Surface *dst, float theta, float xscale,
 				SPG_GetRGBA(SPG_GetPixel(src,rx+1,ry+1), src->format, &R4, &G4, &B4, &A4);\
 \
 				/* Calculate the average */\
-				R = (p1*R1 + p2*R2 + p3*R3 + p4*R4)>>13;\
-				G = (p1*G1 + p2*G2 + p3*G3 + p4*G4)>>13;\
-				B = (p1*B1 + p2*B2 + p3*B3 + p4*B4)>>13;\
-				A = (p1*A1 + p2*A2 + p3*A3 + p4*A4)>>13;\
+				R = (p1*R1 + p2*R2 + p3*R3 + p4*R4)>>FIXED_DECIMAL_PLACES;\
+				G = (p1*G1 + p2*G2 + p3*G3 + p4*G4)>>FIXED_DECIMAL_PLACES;\
+				B = (p1*B1 + p2*B2 + p3*B3 + p4*B4)>>FIXED_DECIMAL_PLACES;\
+				A = (p1*A1 + p2*A2 + p3*A3 + p4*A4)>>FIXED_DECIMAL_PLACES;\
                 if(!(flags & SPG_TCOLORKEY && src->flags & SDL_SRCCOLORKEY && SDL_MapRGB(src->format, R, G, B) == src->format->colorkey))\
                     spg_pixelX(dst,x,y,SPG_MapRGBA(dst->format, R, G, B, A)); \
 				\
@@ -352,31 +363,30 @@ SDL_Rect SPG_transformNorm(SDL_Surface *src, SDL_Surface *dst, float angle, floa
 
 	// Check scales
 	//Sint32 maxint = (Sint32)(pow(2, sizeof(Sint32)*8 - 1 - 13));  // 2^(31-13)
-	Sint32 maxint = 262144;  // 2^(31-13)
 
 	if( xscale == 0 || yscale == 0)
 	{
 		return r;
 	}
 
-	if( 8192.0f/xscale > maxint )
-		xscale = 8192.0f/maxint;
-	else if( 8192.0f/xscale < -maxint )
-		xscale = -8192.0f/maxint;
+	if( xscale > 0 && xscale < FIXED_RATIO )
+		xscale = FIXED_RATIO;
+	else if( xscale < 0 && xscale > -FIXED_RATIO )
+		xscale = -FIXED_RATIO;
 
-	if( 8192.0f/yscale > maxint )
-		yscale = 8192.0f/maxint;
-	else if( 8192.0f/yscale < -maxint )
-		yscale = -8192.0f/maxint;
+	if( yscale > 0 && yscale < FIXED_RATIO )
+		yscale = FIXED_RATIO;
+	else if( yscale < 0 && yscale > -FIXED_RATIO )
+		yscale = -FIXED_RATIO;
 
 
 	// Fixed-point equivalents
-	Sint32 const stx = (Sint32)((sin(angle)/xscale) * 8192.0);
-	Sint32 const ctx = (Sint32)((cos(angle)/xscale) * 8192.0);
-	Sint32 const sty = (Sint32)((sin(angle)/yscale) * 8192.0);
-	Sint32 const cty = (Sint32)((cos(angle)/yscale) * 8192.0);
-	Sint32 const mx = (Sint32)(px*8192.0);
-	Sint32 const my = (Sint32)(py*8192.0);
+	Sint32 const stx = (Sint32)((sin(angle)/xscale) * FIXED_MAX_DECIMAL);
+	Sint32 const ctx = (Sint32)((cos(angle)/xscale) * FIXED_MAX_DECIMAL);
+	Sint32 const sty = (Sint32)((sin(angle)/yscale) * FIXED_MAX_DECIMAL);
+	Sint32 const cty = (Sint32)((cos(angle)/yscale) * FIXED_MAX_DECIMAL);
+	Sint32 const mx = (Sint32)(px*FIXED_MAX_DECIMAL);
+	Sint32 const my = (Sint32)(py*FIXED_MAX_DECIMAL);
 
 	// Compute a bounding rectangle
 	Sint16 xmin=0, xmax=dst->w, ymin=0, ymax=dst->h;
@@ -393,7 +403,7 @@ SDL_Rect SPG_transformNorm(SDL_Surface *src, SDL_Surface *dst, float angle, floa
 	Sint32 const ctdx = ctx*dx;
 	Sint32 const stdx = sty*dx;
 
-	// Lock surfaces... hopfully less than two needs locking!
+	// Lock surfaces... hopefully less than two needs locking!
 	
     if ( spg_lock(src) < 0 )
     {
@@ -460,31 +470,30 @@ SDL_Rect SPG_transformAA(SDL_Surface *src, SDL_Surface *dst, float angle, float 
 
 	// Check scales
 	//Sint32 maxint = (Sint32)(pow(2, sizeof(Sint32)*8 - 1 - 13));  // 2^(31-13)
-	Sint32 maxint = 262144;  // 2^(31-13)
 
 	if( xscale == 0 || yscale == 0)
 	{
 		return r;
 	}
 
-	if( 8192.0/xscale > maxint )
-		xscale =  (float)(8192.0/maxint);
-	else if( 8192.0/xscale < -maxint )
-		xscale =  (float)(-8192.0/maxint);
+	if( xscale > 0 && xscale < FIXED_RATIO )
+		xscale = FIXED_RATIO;
+	else if( xscale < 0 && xscale > -FIXED_RATIO )
+		xscale = -FIXED_RATIO;
 
-	if( 8192.0/yscale > maxint )
-		yscale =  (float)(8192.0/maxint);
-	else if( 8192.0/yscale < -maxint )
-		yscale =  (float)(-8192.0/maxint);
+	if( yscale > 0 && yscale < FIXED_RATIO )
+		yscale = FIXED_RATIO;
+	else if( yscale < 0 && yscale > -FIXED_RATIO )
+		yscale = -FIXED_RATIO;
 
 
 	// Fixed-point equivalents
-	Sint32 const stx = (Sint32)((sin(angle)/xscale) * 8192.0);
-	Sint32 const ctx = (Sint32)((cos(angle)/xscale) * 8192.0);
-	Sint32 const sty = (Sint32)((sin(angle)/yscale) * 8192.0);
-	Sint32 const cty = (Sint32)((cos(angle)/yscale) * 8192.0);
-	Sint32 const mx = (Sint32)(px*8192.0);
-	Sint32 const my = (Sint32)(py*8192.0);
+	Sint32 const stx = (Sint32)((sin(angle)/xscale) * FIXED_MAX_DECIMAL);
+	Sint32 const ctx = (Sint32)((cos(angle)/xscale) * FIXED_MAX_DECIMAL);
+	Sint32 const sty = (Sint32)((sin(angle)/yscale) * FIXED_MAX_DECIMAL);
+	Sint32 const cty = (Sint32)((cos(angle)/yscale) * FIXED_MAX_DECIMAL);
+	Sint32 const mx = (Sint32)(px*FIXED_MAX_DECIMAL);
+	Sint32 const my = (Sint32)(py*FIXED_MAX_DECIMAL);
 
 	// Compute a bounding rectangle
 	Sint16 xmin=0, xmax=dst->w, ymin=0, ymax=dst->h;

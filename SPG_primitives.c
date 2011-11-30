@@ -2505,12 +2505,11 @@ void SPG_RectFilledBlend(SDL_Surface *surface, Sint16 x1, Sint16 y1, Sint16 x2, 
     case 4:   /* Probably 32-bpp */
     {
         Uint32 *row, *pixel;
-        Uint32 dR=(color & Rmask),dG=(color & Gmask),dB=(color & Bmask),dA=(color & Amask);
+        Uint32 dR=(color & Rmask),dG=(color & Gmask),dB=(color & Bmask);
 
         switch (SPG_GetBlend())
         {
         case SPG_COMBINE_ALPHA:  // Blend and combine src and dest alpha
-            dA=((alpha << surface->format->Ashift) & Amask);  // correct
             for (y = y1; y<=y2; y++)
             {
                 row = (Uint32 *)surface->pixels + y*surface->pitch/4;

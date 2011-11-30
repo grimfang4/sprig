@@ -354,7 +354,8 @@ void spg_linehtex(SDL_Surface *dest,Sint16 x1,Sint16 y,Sint16 x2,SDL_Surface *so
 			break;
 
 			case 3: { /* Slow 24-bpp mode, usually not used */
-				Uint8 *pixel, *srcpixel;
+				Uint8 *pixel;
+				//Uint8 *srcpixel;
 				Uint8 *row = (Uint8 *)dest->pixels + y*dest->pitch;
 
 				Uint8 rshift8=dest->format->Rshift/8;
@@ -363,7 +364,7 @@ void spg_linehtex(SDL_Surface *dest,Sint16 x1,Sint16 y,Sint16 x2,SDL_Surface *so
 
 				for (x = x1; x <= x2; x++){
 					pixel = row + x*3;
-					srcpixel = (Uint8 *)source->pixels + (srcy>>16)*source->pitch + (srcx>>16)*3;
+					//srcpixel = (Uint8 *)source->pixels + (srcy>>16)*source->pitch + (srcx>>16)*3;
 
 					SDL_GetRGB(SPG_GetPixel(source, srcx>>16, srcy>>16), source->format, &r, &g, &b);
 
