@@ -300,7 +300,7 @@ DECLSPEC SDL_Surface* SPG_CreateSurface8(Uint32 flags, Uint16 width, Uint16 heig
 DECLSPEC Uint32 SPG_GetPixel(SDL_Surface *surface, Sint16 x, Sint16 y);
 DECLSPEC void SPG_SetClip(SDL_Surface *surface, const SDL_Rect rect);
 
-DECLSPEC SDL_Rect SPG_TransformX(SDL_Surface *src, SDL_Surface *dst, float angle, float xscale, float yscale, Uint16 pivotX, Uint16 pivotY, Uint16 destX, Uint16 destY, Uint8 flags);
+DECLSPEC SDL_Rect SPG_TransformX(SDL_Surface *src, SDL_Surface *dst, float angle, float xscale, float yscale, Sint16 pivotX, Sint16 pivotY, Sint16 destX, Sint16 destY, Uint8 flags);
 DECLSPEC SDL_Surface* SPG_Transform(SDL_Surface *src, Uint32 bgColor, float angle, float xscale, float yscale, Uint8 flags);
 DECLSPEC SDL_Surface* SPG_Rotate(SDL_Surface *src, float angle, Uint32 bgColor);
 DECLSPEC SDL_Surface* SPG_RotateAA(SDL_Surface *src, float angle, Uint32 bgColor);

@@ -48,7 +48,7 @@ extern SPG_bool spg_makedirtyrects;
 extern SPG_DirtyTable* spg_dirtytable_front;
 
 void spg_pixelX(SDL_Surface *dest,Sint16 x,Sint16 y,Uint32 color);
-SDL_Rect spg_transform_tmap(SDL_Surface *src, SDL_Surface *dst, float angle, float xscale, float yscale, Uint16 qx, Uint16 qy);
+SDL_Rect spg_transform_tmap(SDL_Surface *src, SDL_Surface *dst, float angle, float xscale, float yscale, Sint16 qx, Sint16 qy);
 
 // Transformation fixed-point constants
 // Originally, it used 18.13 fixed point.  Now, it uses 21.10 to allow scaling larger images to points.
@@ -69,7 +69,7 @@ SDL_Rect spg_transform_tmap(SDL_Surface *src, SDL_Surface *dst, float angle, flo
 // Helper function to SPG_TransformX()
 // Returns the bounding box
 //==================================================================================
-void spg_calcrect(SDL_Surface *src, SDL_Surface *dst, float theta, float xscale, float yscale, Uint16 px, Uint16 py, Uint16 qx, Uint16 qy, Sint16 *xmin, Sint16 *ymin, Sint16 *xmax, Sint16 *ymax)
+void spg_calcrect(SDL_Surface *src, SDL_Surface *dst, float theta, float xscale, float yscale, Sint16 px, Sint16 py, Sint16 qx, Sint16 qy, Sint16 *xmin, Sint16 *ymin, Sint16 *xmax, Sint16 *ymax)
 {
 	Sint16 x, y, rx, ry;
 
@@ -162,8 +162,9 @@ void spg_calcrect(SDL_Surface *src, SDL_Surface *dst, float theta, float xscale,
 	for (y=ymin; y<ymax; y++){ \
 		dy = y - qy; \
 \
-		sx = (Sint32)(ctdx  + stx*dy + mx);  /* Compute source anchor points */ \
-		sy = (Sint32)(cty*dy - stdx  + my); \
+		sx = (Sint32)(ctdx + stx*dy + mx);  /* Compute source anchor points */ \
+		sy = (Sint32)(cty*dy - stdx + my); \
+        printf("y: %d, qy: %d\n", y, qy); \
 \
 		/* Calculate pointer to dst surface */ \
 		dst_row = (UintXX *)dst->pixels + y*dst_pitch; \
@@ -346,7 +347,7 @@ void spg_calcrect(SDL_Surface *src, SDL_Surface *dst, float theta, float xscale,
 // We get better performance if AA and normal rendering is separated into two functions (better optimization).
 // SPG_TransformX() is used as a wrapper.
 
-SDL_Rect SPG_transformNorm(SDL_Surface *src, SDL_Surface *dst, float angle, float xscale, float yscale ,Uint16 px, Uint16 py, Uint16 qx, Uint16 qy, Uint8 flags)
+SDL_Rect SPG_transformNorm(SDL_Surface *src, SDL_Surface *dst, float angle, float xscale, float yscale ,Sint16 px, Sint16 py, Sint16 qx, Sint16 qy, Uint8 flags)
 {
 	Sint32 dy, sx, sy;
 	Sint16 x, y, rx, ry;
@@ -453,7 +454,7 @@ SDL_Rect SPG_transformNorm(SDL_Surface *src, SDL_Surface *dst, float angle, floa
 }
 
 
-SDL_Rect SPG_transformAA(SDL_Surface *src, SDL_Surface *dst, float angle, float xscale, float yscale ,Uint16 px, Uint16 py, Uint16 qx, Uint16 qy, Uint8 flags)
+SDL_Rect SPG_transformAA(SDL_Surface *src, SDL_Surface *dst, float angle, float xscale, float yscale, Sint16 px, Sint16 py, Sint16 qx, Sint16 qy, Uint8 flags)
 {
 	Sint32 dy, sx, sy;
 	Sint16 x, y, rx, ry;
@@ -560,7 +561,7 @@ SDL_Rect SPG_transformAA(SDL_Surface *src, SDL_Surface *dst, float angle, float 
 	return r;
 }
 
-SDL_Rect SPG_TransformX(SDL_Surface *src, SDL_Surface *dst, float angle, float xscale, float yscale, Uint16 pivotX, Uint16 pivotY, Uint16 destX, Uint16 destY, Uint8 flags)
+SDL_Rect SPG_TransformX(SDL_Surface *src, SDL_Surface *dst, float angle, float xscale, float yscale, Sint16 pivotX, Sint16 pivotY, Sint16 destX, Sint16 destY, Uint8 flags)
 {
     SDL_Rect rect;
 
@@ -627,7 +628,7 @@ SDL_Surface* SPG_Transform(SDL_Surface *src, Uint32 bgColor, float angle, float 
 //==================================================================================
 // Rotate using texture mapping
 //==================================================================================
-SDL_Rect spg_transform_tmap(SDL_Surface *src, SDL_Surface *dst, float angle, float xscale, float yscale, Uint16 qx, Uint16 qy)
+SDL_Rect spg_transform_tmap(SDL_Surface *src, SDL_Surface *dst, float angle, float xscale, float yscale, Sint16 qx, Sint16 qy)
 {
 	float a=(SPG_CLIP_XMAX(src) - SPG_CLIP_XMIN(src))/2.0f;
 	float b=(SPG_CLIP_YMAX(src) - SPG_CLIP_YMIN(src))/2.0f;
