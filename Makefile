@@ -6,7 +6,7 @@ CFLAGS += $(SPRIG_CFLAGS) -fPIC
 LIBS = $(SPRIG_LIBS)
 
 SPRIG_VER = 1
-SPRIG_VER_MINOR = 1
+SPRIG_VER_MINOR = 2
 SPRIG_VER_BUGFIX = 0
 
 OBJECTS=SPG_surface.o SPG_primitives.o SPG_polygon.o SPG_rotation.o SPG_misc.o

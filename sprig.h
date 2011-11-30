@@ -21,15 +21,15 @@
 
 #include "SDL.h"
 
-#define SPG_VER 1  // Check this for MISSING functionality
-#define SPG_VER_MINOR 1  // Check this for ADDED functionality
+#define SPG_VER 1  /* Check this for MISSING functionality */
+#define SPG_VER_MINOR 2  /* Check this for ADDED functionality */
 #define SPG_VER_BUGFIX 0
 
-#define SPG_C_AND_CPP 1  // undef this if you want to force C under a C++ compiler
-//#define SPG_USE_EXTENDED 2  // Build Sprig with this to add some extra functions
-#define SPG_DEFINE_PI 3  // Allow defines of pi variations
-#define SPG_MAX_ERRORS 40  // Max size of error message stack
-#define SPG_USE_FAST_MATH 4 // undef this to use math.h's sqrt()
+#define SPG_C_AND_CPP 1  /* undef this if you want to force C under a C++ compiler */
+/*#define SPG_USE_EXTENDED 2 */  /* Build Sprig with this to add some extra functions */
+#define SPG_DEFINE_PI 3  /* Allow defines of pi variations */
+#define SPG_MAX_ERRORS 40  /* Max size of error message stack */
+#define SPG_USE_FAST_MATH 4 /* undef this to use math.h's sqrt() */
 
 
 
@@ -48,7 +48,7 @@
     #define SPG_C_ONLY 6
 #endif
 
-//PI_8, PI_4, PI_2, PI3_4, PI, PI5_4, PI3_2, PI7_4, PI2
+/* PI_8, PI_4, PI_2, PI3_4, PI, PI5_4, PI3_2, PI7_4, PI2 */
 #ifdef SPG_DEFINE_PI
     #ifndef PI_8
         #define PI_8   0.392699082f
@@ -163,7 +163,7 @@
 
 /*
 *  Some compilers use a special export keyword
-*  Thanks to Seung Chan Lim (limsc@maya.com or slim@djslim.com) to pointing this out
+*  Thanks to Seung Chan Lim (limsc@maya.com or slim@djslim.com) for pointing this out
 *  (From SDL)
 */
 #ifndef DECLSPEC
@@ -200,7 +200,7 @@ typedef struct SPG_DirtyTable
 
 #define SPG_bool Uint8
 
-// default = 0
+/* default = 0 */
 #define SPG_DEST_ALPHA 0
 #define SPG_SRC_ALPHA 1
 #define SPG_COMBINE_ALPHA 2
@@ -212,7 +212,7 @@ typedef struct SPG_DirtyTable
 #define SPG_COMBINE_ALPHA_ONLY 8
 #define SPG_REPLACE_COLORKEY 9
 
-// Alternate names:
+/* Alternate names: */
 #define SPG_SRC_MASK 4
 #define SPG_DEST_MASK 5
 
@@ -227,12 +227,12 @@ typedef struct SPG_DirtyTable
 #define SPG_TBLEND SPG_FLAG6
 #define SPG_TSURFACE_ALPHA SPG_FLAG7
 
-#ifdef SPG_CPP // BOTH C and C++
+#ifdef SPG_CPP /* BOTH C and C++ */
 extern "C" {
 #endif
 
 
-// MISC
+/* MISC */
 
 DECLSPEC const SDL_version SPG_LinkedVersion();
 DECLSPEC SPG_bool SPG_Probe(int option);
@@ -266,14 +266,14 @@ DECLSPEC SPG_bool SPG_GetSurfaceAlpha(void);
 DECLSPEC void SPG_RectOR(const SDL_Rect rect1, const SDL_Rect rect2, SDL_Rect* dst_rect);
 DECLSPEC SPG_bool SPG_RectAND(const SDL_Rect A, const SDL_Rect B, SDL_Rect* intersection);
 
-// DIRTY RECT
-//  Important stuff
+/* DIRTY RECT */
+/*  Important stuff */
 DECLSPEC void SPG_EnableDirty(SPG_bool enable);
 DECLSPEC void SPG_DirtyInit(Uint16 maxsize);
 DECLSPEC void SPG_DirtyAdd(SDL_Rect* rect);
 DECLSPEC SPG_DirtyTable* SPG_DirtyUpdate(SDL_Surface* screen);
 DECLSPEC void SPG_DirtySwap(void);
-//  Other stuff
+/*  Other stuff */
 DECLSPEC SPG_bool SPG_DirtyEnabled(void);
 DECLSPEC SPG_DirtyTable* SPG_DirtyMake(Uint16 maxsize);
 DECLSPEC void SPG_DirtyAddTo(SPG_DirtyTable* table, SDL_Rect* rect);
@@ -283,7 +283,7 @@ DECLSPEC void SPG_DirtyClear(SPG_DirtyTable* table);
 DECLSPEC void SPG_DirtyLevel(Uint16 optimizationLevel);
 DECLSPEC void SPG_DirtyClip(SDL_Surface* screen, SDL_Rect* rect);
 
-// PALETTE
+/* PALETTE */
 DECLSPEC SDL_Color* SPG_ColorPalette(void);
 DECLSPEC SDL_Color* SPG_GrayPalette(void);
 DECLSPEC Uint32 SPG_FindPaletteColor(SDL_Palette* palette, Uint8 r, Uint8 g, Uint8 b);
@@ -294,7 +294,7 @@ DECLSPEC void SPG_FadedPalette32Alpha(SDL_PixelFormat* format, Uint32 color1, Ui
 DECLSPEC void SPG_RainbowPalette32(SDL_PixelFormat* format, Uint32 *colorArray, Uint8 intensity, Uint16 startIndex, Uint16 stopIndex);
 DECLSPEC void SPG_GrayPalette32(SDL_PixelFormat* format, Uint32 *colorArray, Uint16 startIndex, Uint16 stopIndex);
 
-// SURFACE
+/* SURFACE */
 
 DECLSPEC SDL_Surface* SPG_CreateSurface8(Uint32 flags, Uint16 width, Uint16 height);
 DECLSPEC Uint32 SPG_GetPixel(SDL_Surface *surface, Sint16 x, Sint16 y);
@@ -308,7 +308,7 @@ DECLSPEC SDL_Surface* SPG_RotateAA(SDL_Surface *src, float angle, Uint32 bgColor
 DECLSPEC SDL_Surface* SPG_ReplaceColor(SDL_Surface* src, SDL_Rect* srcrect, SDL_Surface* dest, SDL_Rect* destrect, Uint32 color);
 
 
-// DRAWING
+/* DRAWING */
 
 DECLSPEC int SPG_Blit(SDL_Surface *Src, SDL_Rect* srcRect, SDL_Surface *Dest, SDL_Rect* destRect);
 DECLSPEC void SPG_SetBlit(void (*blitfn)(SDL_Surface*, SDL_Rect*, SDL_Surface*, SDL_Rect*));
@@ -317,7 +317,7 @@ DECLSPEC void (*SPG_GetBlit())(SDL_Surface*, SDL_Rect*, SDL_Surface*, SDL_Rect*)
 DECLSPEC void SPG_FloodFill(SDL_Surface *dst, Sint16 x, Sint16 y, Uint32 color);
 
 
-// PRIMITIVES
+/* PRIMITIVES */
 
 DECLSPEC void SPG_Pixel(SDL_Surface *surface, Sint16 x, Sint16 y, Uint32 color);
 DECLSPEC void SPG_PixelBlend(SDL_Surface *surface, Sint16 x, Sint16 y, Uint32 color, Uint8 alpha);
@@ -391,7 +391,7 @@ DECLSPEC void SPG_Bezier(SDL_Surface *surface, Sint16 startX, Sint16 startY, Sin
 DECLSPEC void SPG_BezierBlend(SDL_Surface *surface, Sint16 startX, Sint16 startY, Sint16 cx1, Sint16 cy1, Sint16 cx2, Sint16 cy2, Sint16 endX, Sint16 endY, Uint8 quality, Uint32 color, Uint8 alpha);
 
 
-// POLYGONS
+/* POLYGONS */
 
 DECLSPEC void SPG_Trigon(SDL_Surface *surface,Sint16 x1,Sint16 y1,Sint16 x2,Sint16 y2,Sint16 x3,Sint16 y3,Uint32 color);
 DECLSPEC void SPG_TrigonBlend(SDL_Surface *surface,Sint16 x1,Sint16 y1,Sint16 x2,Sint16 y2,Sint16 x3,Sint16 y3,Uint32 color, Uint8 alpha);
@@ -422,20 +422,20 @@ DECLSPEC void SPG_TranslatePoints(Uint16 n, SPG_Point* points, float x, float y)
 
 
 #ifdef SPG_CPP
-}  // extern "C"
+}  /* extern "C" */
 #endif
 
 
 
 
-// Include all convenience calls
+/* Include all convenience calls */
 #include "sprig_inline.h"
 
-// Include extended calls
+/* Include extended calls */
 #ifdef SPG_USE_EXTENDED
 
 
-    #ifdef SPG_CPP // BOTH C and C++
+    #ifdef SPG_CPP /* BOTH C and C++ */
     extern "C" {
     #endif
 
@@ -443,8 +443,8 @@ DECLSPEC void SPG_TranslatePoints(Uint16 n, SPG_Point* points, float x, float y)
         DECLSPEC void SPG_FloodFill8(SDL_Surface* dest, Sint16 x, Sint16 y, Uint32 newColor);
 
 
-    #ifdef SPG_CPP // BOTH C and C++
-    }  // extern "C"
+    #ifdef SPG_CPP /* BOTH C and C++ */
+    }  /* extern "C" */
     #endif
 
 

@@ -186,7 +186,7 @@ static inline void SPG_RestoreClip(SDL_Surface* surface)
     }
 }
 
-// 5-5-5
+/* 5-5-5 */
 static inline SDL_Surface* SPG_CreateSurface16(Uint32 flags, Uint16 width, Uint16 height)
 {
     SDL_Surface* result = SDL_CreateRGBSurface(flags, width, height, 16, 31 << 10, 31 << 5, 31, 0);
@@ -194,7 +194,7 @@ static inline SDL_Surface* SPG_CreateSurface16(Uint32 flags, Uint16 width, Uint1
     return result;
 }
 
-// 4-4-4-4
+/* 4-4-4-4 */
 static inline SDL_Surface* SPG_CreateSurface16Alpha(Uint32 flags, Uint16 width, Uint16 height)
 {
     #if SDL_BYTEORDER == SDL_BIG_ENDIAN
