@@ -164,7 +164,6 @@ void spg_calcrect(SDL_Surface *src, SDL_Surface *dst, float theta, float xscale,
 \
 		sx = (Sint32)(ctdx + stx*dy + mx);  /* Compute source anchor points */ \
 		sy = (Sint32)(cty*dy - stdx + my); \
-        printf("y: %d, qy: %d\n", y, qy); \
 \
 		/* Calculate pointer to dst surface */ \
 		dst_row = (UintXX *)dst->pixels + y*dst_pitch; \
