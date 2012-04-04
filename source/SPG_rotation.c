@@ -47,6 +47,7 @@ extern SPG_bool spg_usedegrees;
 extern SPG_bool spg_makedirtyrects;
 extern SPG_DirtyTable* spg_dirtytable_front;
 
+void spg_pixelblend(SDL_Surface *surface, Sint16 x, Sint16 y, Uint32 color, Uint8 alpha);
 void spg_pixelX(SDL_Surface *dest,Sint16 x,Sint16 y,Uint32 color);
 SDL_Rect spg_transform_tmap(SDL_Surface *src, SDL_Surface *dst, float angle, float xscale, float yscale, Sint16 qx, Sint16 qy);
 
@@ -176,7 +177,12 @@ void spg_calcrect(SDL_Surface *src, SDL_Surface *dst, float theta, float xscale,
 			{\
                 col = *(src_row+ry*src_pitch+rx);\
                  if(!(flags & SPG_TCOLORKEY && src->flags & SDL_SRCCOLORKEY && col == src->format->colorkey))\
-                    *(dst_row + x) = (UintXX)(col);\
+				 { \
+				    if(flags & SPG_TBLEND) \
+						spg_pixelblend(dst,x,y,col,((col & src->format->Amask) >> src->format->Ashift)); \
+					else \
+						*(dst_row + x) = (UintXX)(col);\
+                 } \
 			}\
 			sx += ctx;  /* Incremental transformations */ \
 			sy -= sty; \
@@ -201,7 +207,12 @@ void spg_calcrect(SDL_Surface *src, SDL_Surface *dst, float theta, float xscale,
 			if( (rx>=sxmin) && (rx<=sxmax) && (ry>=symin) && (ry<=symax) ){ \
 				SPG_GetRGBA(SPG_GetPixel(src,rx,ry), src->format, &R, &G, &B, &A);\
 				if(!(flags & SPG_TCOLORKEY && src->flags & SDL_SRCCOLORKEY && SDL_MapRGB(src->format, R, G, B) == src->format->colorkey))\
-                    spg_pixelX(dst,x,y,SPG_MapRGBA(dst->format, R, G, B, A)); \
+				 { \
+				    if(flags & SPG_TBLEND) \
+						spg_pixelblend(dst,x,y,SDL_MapRGB(dst->format, R, G, B), A); \
+					else \
+						spg_pixelX(dst,x,y,SPG_MapRGBA(dst->format, R, G, B, A)); \
+                 } \
 				\
 			} \
 			sx += ctx;  /* Incremental transformations */ \
