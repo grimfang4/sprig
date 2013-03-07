@@ -26,7 +26,7 @@ endif ( NOT SDL_FOUND )
 
 
 include_directories(${SDL_INCLUDE_DIR})
-include_directories(sprig)
+include_directories(source)
 
 link_libraries (
    ${SDL_LIBRARY}
